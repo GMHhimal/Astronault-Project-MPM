@@ -1,0 +1,53 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 59f7f387e76b9d545a391df46b992ec0, type: 3}
+  m_Name: MoonLandingLibrary
+  m_EditorClassIdentifier: Assembly-CSharp::Astronaut.MoonLanding.MoonLandingLibrary
+  dustMaterial: {fileID: 2100000, guid: ce1eb899c95ed2b4c878a0b63af85a2e, type: 2}
+  smokeMaterial: {fileID: 2100000, guid: 86d19763babb7794b8742bf0bfa6c26f, type: 2}
+  fireMaterial: {fileID: 2100000, guid: 21cd0c4d6c455324c920bd03205be07b, type: 2}
+  sparkMaterial: {fileID: 2100000, guid: 9f3d374ad51ecaa4db8ee2e92c1b2c69, type: 2}
+  flashMaterial: {fileID: 2100000, guid: 5ef98c220e5ed57459c4f3fa908552dc, type: 2}
+  hologramMaterial: {fileID: 2100000, guid: 2ec7934f2e2837c4d84995cb9848899b, type: 2}
+  displayFont: {fileID: 12800000, guid: 87da3b26653952e4994cb61e22071ae0, type: 3}
+  bodyFont: {fileID: 12800000, guid: 1d0ad2dfd9a5e8d4aab4dd647112060b, type: 3}
+  engineLoop: {fileID: 8300000, guid: 5554e685206ca5a44aec353a2cf5d34f, type: 3}
+  engineIgnite: {fileID: 8300000, guid: c5cc08ff736a7e746a7c4b7d5d339caa, type: 3}
+  engineShutdown: {fileID: 8300000, guid: ee69a0dee08fbcc4aaedcabfc9710963, type: 3}
+  rcsPuffs:
+  - {fileID: 8300000, guid: 5b5d74eb63f907a49b6f49b58b719668, type: 3}
+  - {fileID: 8300000, guid: ccf4da20395d0424ea9704b857640854, type: 3}
+  - {fileID: 8300000, guid: 7b6ca84c138d94045bf2b3fdf2594241, type: 3}
+  sparks:
+  - {fileID: 8300000, guid: e1f4d18860541b64c86229141d0edd26, type: 3}
+  - {fileID: 8300000, guid: c0a812e87a5aee24680735b9be3afb03, type: 3}
+  - {fileID: 8300000, guid: 12002d30df36a5c48b4b666b37890fbc, type: 3}
+  - {fileID: 8300000, guid: f18ab0e4b54cc304e8f1f30938d2ad67, type: 3}
+  electricHumLoop: {fileID: 8300000, guid: 401c37e345097b64e9bf1496729290e6, type: 3}
+  explosion: {fileID: 8300000, guid: 90744fd68a794c5408c5a468367f3ede, type: 3}
+  touchdownThud: {fileID: 8300000, guid: da3a6bcfc9ac0f64b9532f8b8c21249e, type: 3}
+  metalImpact: {fileID: 8300000, guid: 6e895640869e5cf44b7e3422083e43b8, type: 3}
+  cabinAmbienceLoop: {fileID: 8300000, guid: 7e97ff0122e945848b45029c590f20d4, type: 3}
+  dustHissLoop: {fileID: 8300000, guid: 6b73a7ea072a10d43a0ad056d79bf56b, type: 3}
+  masterAlarmLoop: {fileID: 8300000, guid: ae39bd9983b411a4f8782dfcd61dd06d, type: 3}
+  warningBeep: {fileID: 8300000, guid: 4d070f15de9d7114caed7b93f0bd2c0f, type: 3}
+  lowFuel: {fileID: 8300000, guid: 34210a0ad9adad84a9c3cd93fc65382e, type: 3}
+  quindarIn: {fileID: 8300000, guid: c20881425900d21438371ce6a4ef0f60, type: 3}
+  quindarOut: {fileID: 8300000, guid: 7decb3a9796e4a44d82d46785743b8c9, type: 3}
+  radioStatic: {fileID: 8300000, guid: df80b3b707f76ce45ab6a08f2fec3549, type: 3}
+  uiClick: {fileID: 8300000, guid: a5f9daead5fc09947912f30c1ca3606d, type: 3}
+  countdownBeep: {fileID: 8300000, guid: 232425a94dbfbe4409bde593f54388ce, type: 3}
+  countdownGo: {fileID: 8300000, guid: e98e6d30a3d86574c8d5bc41cbabf187, type: 3}
+  missionSuccess: {fileID: 8300000, guid: bd066fd70b246a842a5c7bbf95d2fd54, type: 3}
+  missionFailed: {fileID: 8300000, guid: 827d8b42f89ddf34aa0a7b34d95fff07, type: 3}
+  voiceContactLight: {fileID: 0}
+  voiceLanded: {fileID: 0}
