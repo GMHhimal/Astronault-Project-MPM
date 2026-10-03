@@ -1,0 +1,84 @@
+{
+  "rockets": [
+    {
+      "id": "chinese_fire_arrow",
+      "displayName": "Chinese Fire Arrow",
+      "correctZoneId": "13TH_CENTURY",
+      "zoneLabel": "13th Century",
+      "country": "China",
+      "keyAdvance": "The world's first gunpowder-propelled rocket and the earliest multi-stage rocket design.",
+      "triviaFact": "True self-propelled rocket versions became widespread across China by the 12th-13th centuries.",
+      "spriteName": "chinese_fire_arrow"
+    },
+    {
+      "id": "goddard_nell",
+      "displayName": "Goddard \"Nell\"",
+      "correctZoneId": "1926",
+      "zoneLabel": "1926",
+      "country": "United States",
+      "keyAdvance": "The world's first liquid-propellant rocket, launched by Robert Goddard on March 26, 1926.",
+      "triviaFact": "Its historic first flight lasted only 2.5 seconds and the rocket landed in a nearby cabbage patch.",
+      "spriteName": "goddard_nell"
+    },
+    {
+      "id": "v2_aggregat4",
+      "displayName": "V-2 (Aggregat-4)",
+      "correctZoneId": "1942_1944",
+      "zoneLabel": "1942 - 1944",
+      "country": "Germany",
+      "keyAdvance": "The first long-range ballistic missile and the first rocket capable of reaching space.",
+      "triviaFact": "The V-2 was the first man-made object to reach the edge of space.",
+      "spriteName": "v2_aggregat4"
+    },
+    {
+      "id": "r7_sputnik",
+      "displayName": "R-7 / Sputnik Launcher",
+      "correctZoneId": "1957",
+      "zoneLabel": "1957",
+      "country": "Soviet Union (USSR)",
+      "keyAdvance": "The first orbital launch vehicle in history, launched on October 4, 1957.",
+      "triviaFact": "The R-7 is the only rocket family that has been continuously flying, in evolved form, since the dawn of the Space Age - the longest-serving rocket design in history.",
+      "spriteName": "r7_sputnik"
+    },
+    {
+      "id": "saturn_v",
+      "displayName": "Saturn V",
+      "correctZoneId": "1967_1969",
+      "zoneLabel": "1967 - 1969",
+      "country": "United States",
+      "keyAdvance": "The most powerful rocket ever flown successfully, with the capability to send astronauts to the Moon.",
+      "triviaFact": "At 363 feet tall, Saturn V was taller than the Statue of Liberty and generated the thrust of 85 Hoover Dams.",
+      "spriteName": "saturn_v"
+    },
+    {
+      "id": "space_shuttle",
+      "displayName": "Space Shuttle (STS)",
+      "correctZoneId": "1981",
+      "zoneLabel": "1981",
+      "country": "United States",
+      "keyAdvance": "The first reusable orbital spacecraft, first launched on April 12, 1981.",
+      "triviaFact": "Its Solid Rocket Boosters were recovered from the ocean after launch and flown again on later missions.",
+      "spriteName": "space_shuttle"
+    },
+    {
+      "id": "falcon_9",
+      "displayName": "Falcon 9",
+      "correctZoneId": "2015_2017",
+      "zoneLabel": "2015 - 2017",
+      "country": "United States",
+      "keyAdvance": "The first orbital-class rocket booster to land and be reused.",
+      "triviaFact": "Falcon 9 achieved the first successful vertical landing of an orbital booster in December 2015, and the first re-flight of a used booster in March 2017.",
+      "spriteName": "falcon_9"
+    },
+    {
+      "id": "starship",
+      "displayName": "Starship",
+      "correctZoneId": "2023",
+      "zoneLabel": "2023",
+      "country": "United States",
+      "keyAdvance": "A fully reusable super-heavy lift vehicle designed for Moon and Mars missions.",
+      "triviaFact": "Starship is the largest rocket ever built, and its April 2023 flight was the first integrated test of the full vehicle.",
+      "spriteName": "starship"
+    }
+  ]
+}
