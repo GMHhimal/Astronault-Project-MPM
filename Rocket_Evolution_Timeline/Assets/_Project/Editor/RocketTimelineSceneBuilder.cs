@@ -71,7 +71,7 @@ namespace RocketTimeline.EditorTools
         private static readonly Color ButtonRed = new Color(0.80f, 0.24f, 0.24f);
         private static readonly Color ButtonSlate = new Color(0.32f, 0.36f, 0.46f);
         private static readonly Color ButtonGold = new Color(0.93f, 0.66f, 0.16f);
-        private static readonly Vector2 PlacedRocketSize = new Vector2(132, 132);
+        private static readonly Vector2 PlacedRocketSize = new Vector2(148, 148);
 
         [MenuItem("Rocket Timeline/Build Everything (Menu + Game)")]
         public static void BuildEverything()
@@ -143,12 +143,14 @@ namespace RocketTimeline.EditorTools
             Anchor(objective, new Vector2(0, 1), new Vector2(1, 1), new Vector2(0.5f, 1), new Vector2(0, -85), new Vector2(-80, 35));
 
             // ---- Timeline area ----------------------------------------------------
-            // Height trimmed from 410 to 370 (and the pool area below shrunk to
-            // match - see PoolArea) specifically to free up room for a real gap
-            // between the timeline's bottom row and the rocket pool, instead of
-            // them sitting edge to edge.
+            // Height grown to 430 (up from the original 410, and up again from
+            // 370 in the previous pass) so each drop-zone box has real room for
+            // a bigger placed-rocket sprite (see PlacedRocketSize) without it
+            // crowding the zone's label or poking into its green/red outline
+            // ring. The pool area below is sized to still leave a clear gap
+            // below this (see PoolArea).
             RectTransform timelineArea = CreateUIObject("TimelineArea", canvasRoot);
-            Anchor(timelineArea, new Vector2(0, 1), new Vector2(1, 1), new Vector2(0.5f, 1), new Vector2(0, -135), new Vector2(-80, 370));
+            Anchor(timelineArea, new Vector2(0, 1), new Vector2(1, 1), new Vector2(0.5f, 1), new Vector2(0, -135), new Vector2(-80, 430));
 
             RectTransform line = CreateStretchPanel("TimelineLine", timelineArea, LineColor);
             Anchor(line, new Vector2(0, 0.49f), new Vector2(1, 0.49f), new Vector2(0.5f, 0.5f), Vector2.zero, new Vector2(0, 4));
@@ -172,16 +174,15 @@ namespace RocketTimeline.EditorTools
             }
 
             // ---- Rocket pool --------------------------------------------------------
-            // Raised from y=125 to y=155 and shrunk from 380 to 350 tall (grid
-            // cell height 180 -> 165, so 2 rows of cards still fit exactly:
-            // 165*2 + 20 spacing = 350). Combined with TimelineArea's height
-            // trim above, this opens a clear ~70px gap between the timeline's
-            // bottom row and the pool cards, instead of them overlapping.
+            // y=150, height=310 (grid cell height 145, so 2 rows still fit
+            // exactly: 145*2 + 20 spacing = 310). Sized so the now-taller
+            // TimelineArea above still has a clear ~55px gap above this, and
+            // this still has a clear ~35px gap above the controls bar below.
             RectTransform poolArea = CreateUIObject("PoolArea", canvasRoot);
-            Anchor(poolArea, new Vector2(0, 0), new Vector2(1, 0), new Vector2(0.5f, 0), new Vector2(0, 155), new Vector2(-80, 350));
+            Anchor(poolArea, new Vector2(0, 0), new Vector2(1, 0), new Vector2(0.5f, 0), new Vector2(0, 150), new Vector2(-80, 310));
 
             GridLayoutGroup grid = poolArea.gameObject.AddComponent<GridLayoutGroup>();
-            grid.cellSize = new Vector2(240, 165);
+            grid.cellSize = new Vector2(240, 145);
             grid.spacing = new Vector2(24, 20);
             grid.childAlignment = TextAnchor.MiddleCenter;
             grid.constraint = GridLayoutGroup.Constraint.FixedColumnCount;
@@ -321,10 +322,15 @@ namespace RocketTimeline.EditorTools
             Anchor(outline, Vector2.zero, Vector2.one, new Vector2(0.5f, 0.5f), Vector2.zero, new Vector2(18, 18));
 
             RectTransform labelRect = CreateText("Label", box, label, 22, TextColor, TextAnchor.MiddleCenter, FontStyle.Bold);
-            Anchor(labelRect, new Vector2(0, 1), new Vector2(1, 1), new Vector2(0.5f, 1), new Vector2(0, -10), new Vector2(-16, 42));
+            Anchor(labelRect, new Vector2(0, 1), new Vector2(1, 1), new Vector2(0.5f, 1), new Vector2(0, -8), new Vector2(-16, 34));
 
+            // Vertically centered in the space *below* the label (box height
+            // grew in this pass specifically to give this room), rather than a
+            // fixed low fraction that worked for the old shorter boxes but left
+            // a bigger placed rocket sprite poking into the label or the box's
+            // outline ring.
             RectTransform slotAnchor = CreateUIObject("SlotAnchor", box);
-            slotAnchor.anchorMin = slotAnchor.anchorMax = new Vector2(0.5f, 0.38f);
+            slotAnchor.anchorMin = slotAnchor.anchorMax = new Vector2(0.5f, 0.396f);
             slotAnchor.pivot = new Vector2(0.5f, 0.5f);
             slotAnchor.sizeDelta = PlacedRocketSize;
             slotAnchor.anchoredPosition = Vector2.zero;
@@ -340,7 +346,7 @@ namespace RocketTimeline.EditorTools
 
         private static DraggableRocket BuildRocketCard(Transform parent, RocketItem data)
         {
-            RectTransform card = BuildNineSlicePanel($"Card_{data.id}", parent, "ui_panel", CardTint, new Vector2(240, 165));
+            RectTransform card = BuildNineSlicePanel($"Card_{data.id}", parent, "ui_panel", CardTint, new Vector2(240, 145));
             card.gameObject.GetComponent<Image>().raycastTarget = true;
 
             CanvasGroup canvasGroup = card.gameObject.AddComponent<CanvasGroup>();
