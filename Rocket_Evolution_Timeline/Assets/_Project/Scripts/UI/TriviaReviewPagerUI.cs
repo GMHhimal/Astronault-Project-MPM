@@ -30,6 +30,13 @@ namespace RocketTimeline.UI
         public Image rocketImage;
         public Text pageIndicatorText;
 
+        [Header("v16: the Key Advances / Trivia Fact / Countries block now\n" +
+                 "scrolls (see RocketTimelineSceneBuilder.BuildTriviaReviewPanel)\n" +
+                 "so a page change needs to snap it back to the top - otherwise\n" +
+                 "paging to a new rocket while scrolled down would show that\n" +
+                 "rocket's panel mid-scroll, possibly cut off at the top.")]
+        public ScrollRect detailScrollRect;
+
         [Header("Data (ordered chronologically - same order as the timeline itself)")]
         public RocketItem[] rockets;
         public Sprite[] rocketSprites;
@@ -84,6 +91,12 @@ namespace RocketTimeline.UI
             }
 
             if (pageIndicatorText != null) pageIndicatorText.text = $"{currentIndex + 1} / {rockets.Length}";
+
+            if (detailScrollRect != null)
+            {
+                Canvas.ForceUpdateCanvases();
+                detailScrollRect.verticalNormalizedPosition = 1f;
+            }
         }
     }
 }

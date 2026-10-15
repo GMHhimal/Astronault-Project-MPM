@@ -119,10 +119,10 @@ TextureImporter:
       name: goddard_nell_0
       rect:
         serializedVersion: 2
-        x: 193
-        y: 69
-        width: 128
-        height: 215
+        x: 22
+        y: 49
+        width: 243
+        height: 807
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -141,10 +141,10 @@ TextureImporter:
       name: goddard_nell_1
       rect:
         serializedVersion: 2
-        x: 231
-        y: 280
-        width: 51
-        height: 173
+        x: 89
+        y: 44
+        width: 107
+        height: 6
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}

@@ -116,10 +116,10 @@ TextureImporter:
       name: v2_aggregat4_0
       rect:
         serializedVersion: 2
-        x: 59
-        y: 50
-        width: 395
-        height: 413
+        x: 31
+        y: 46
+        width: 325
+        height: 808
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}

@@ -9,6 +9,32 @@ namespace RocketTimeline.Gameplay
     /// drag using Unity's standard UI event interfaces - this is the same
     /// pattern Unity's own drag-and-drop examples use, so it works with mouse,
     /// touch, and the new Input System's UI actions without extra setup.
+    ///
+    /// v11 introduced a "forward sideways drags to the pool's ScrollRect
+    /// instead of picking the card up" heuristic, reasoning that a
+    /// predominantly-horizontal gesture meant "scroll the pool," not "pick
+    /// up this card." v16 removes that heuristic entirely, after two rounds
+    /// of client reports from opposite directions: first that some genuinely
+    /// vertical pickups were being misclassified as scrolls (because the
+    /// decision was based on a tiny, noisy sample of movement - either one
+    /// frame's delta, or the ~10px built-in drag threshold distance, taken
+    /// at the exact moment OnBeginDrag first fires), and then, after
+    /// tightening that heuristic, that horizontal drags on a card no longer
+    /// showed the pickup animation AT ALL ("works vertically, not
+    /// horizontally") - which, as it turns out, was the heuristic doing
+    /// exactly what it was designed to do (forward sideways drags to
+    /// scrolling) but not what the client actually wanted (every drag
+    /// starting on a card should pick it up, full stop, since the whole
+    /// point of dragging a card is to place it). Rather than keep tuning a
+    /// direction-guessing threshold that can only ever be a guess at
+    /// BeginDrag time, every drag that starts on a card now unconditionally
+    /// picks it up. Scrolling the pool still works great without any of
+    /// this: the pool's own background and the generous 24x20-unit gutter
+    /// GridLayoutGroup leaves between cards aren't covered by this
+    /// component, so a drag starting there reaches the ScrollRect directly
+    /// and scrolls normally - plus the pool's own always-visible scrollbar
+    /// handle and mouse-wheel scrolling, both already independent of this
+    /// class.
     /// </summary>
     [RequireComponent(typeof(RectTransform))]
     [RequireComponent(typeof(CanvasGroup))]
@@ -48,6 +74,10 @@ namespace RocketTimeline.Gameplay
 
         public void OnBeginDrag(PointerEventData eventData)
         {
+            // v16: every drag starting on a card picks it up - no more
+            // direction-based forwarding to the pool's ScrollRect. See the
+            // class comment above for why.
+
             // If we were already placed in a zone, free that zone up immediately.
             if (CurrentZone != null)
             {

@@ -1,0 +1,132 @@
+{
+  "topics": [
+    {
+      "id": "satellites",
+      "displayName": "Satellites",
+      "subtitle": "Orbiting Earth",
+      "iconName": "topic_satellites",
+      "facts": [
+        {
+          "heading": "Thousands and Counting",
+          "body": "Thousands of satellites have been launched since the Soviet Union's Sputnik 1 opened the space age in 1957, and the number in orbit keeps climbing every year. Most sit in low Earth orbit (LEO), only 200 to 2,000 km (125 to 1,250 mi) up - close enough that each one completes a full trip around the planet in roughly 2 hours, fast enough to cross the night sky in just a few minutes."
+        },
+        {
+          "heading": "Four Kinds of Orbit",
+          "body": "Low Earth orbit is near and fast, the default choice for crewed missions and modern internet constellations. Geostationary orbit sits 35,800 km up above the equator with a 24-hour period, so a satellite appears to hang motionless over one spot - ideal for TV and weather satellites watching the same patch of Earth all day. Polar orbit instead surveys the whole planet strip by strip as Earth spins beneath it, while tilted or elliptical orbits suit certain observatories."
+        },
+        {
+          "heading": "Finding Your Way: GPS, GLONASS, Galileo",
+          "body": "GPS (USA) uses more than 30 satellites spread across 6 orbital planes about 24,000 km (15,000 mi) up. At any moment 3 to 4 are visible above a given point on Earth, but a receiver needs 4 at once to solve its position and correct its own clock. Russia runs a similar system, GLONASS, and Europe's Galileo constellation had 26 satellites in orbit by December 2021, building toward a fleet of 30 steering everything from phone maps to commercial shipping."
+        },
+        {
+          "heading": "Watching the Weather",
+          "body": "Weather satellites like ESA's Meteosats sit in geostationary orbit at 35,800 km (22,240 mi), locked to a 24-hour period so their cameras stay fixed on one side of Earth and can track the same storm system developing hour after hour. That steady vantage point is what makes the swirling cloud-motion footage on a nightly weather forecast possible, and it lets meteorologists spot a hurricane forming days before it ever reaches land."
+        },
+        {
+          "heading": "Eyes on the Ground",
+          "body": "Earth observation satellites track land-use change, ocean currents, and air pollution, and combining images taken from different angles produces detailed 3-D terrain data. The sharpest can resolve objects as small as 50 cm (20 in) - sharp enough to read a newspaper headline from orbit - and radar satellites can image the ground at night or straight through cloud cover, since radar waves pass through clouds that would block an ordinary camera entirely."
+        },
+        {
+          "heading": "Connecting the World",
+          "body": "Telecommunications satellites transformed radio, TV, and phone - the first live transatlantic TV relay, from America to Britain, went out in 1962 and was watched as something close to a miracle at the time. Modern satellites carry hundreds of digital TV channels straight to home dishes, and satellite phones give reliable coverage in deserts, oceans, or mountain ranges with no ground network at all."
+        }
+      ]
+    },
+    {
+      "id": "rovers",
+      "displayName": "Rovers & Robotic Explorers",
+      "subtitle": "Automated vehicles in space",
+      "iconName": "topic_rovers",
+      "facts": [
+        {
+          "heading": "The Lunar Rover: A Moon Car",
+          "body": "The Apollo Lunar Roving Vehicle was a 4-wheeled, 2-seat \"moon buggy\" with a top speed only about as fast as a human can run - astronauts drove it up to 20 km (12 mi) at a time, exploring far beyond walking range near the landing site. Apollo 15 in 1971 was the fourth crewed Moon landing and the first to carry one, and astronaut Jim Irwin can be seen loading gear onto it in the mission's own photographs."
+        },
+        {
+          "heading": "Lunokhod 1",
+          "body": "The Soviet Union's Lunokhod 1 finished its mission in 1971 as the first remote-controlled rover ever to operate on the Moon, driven entirely from a control room back on Earth rather than carrying a crew. It proved that a robotic vehicle could survive and keep working on another world long enough to be genuinely useful - a lesson every later planetary rover, on the Moon or on Mars, has built on since."
+        },
+        {
+          "heading": "Mariner 2: First to Another Planet",
+          "body": "Launched in July 1962, Mariner 2 became the first successful probe to reach another planet, flying past Venus at 34,838 km (21,648 mi) on 14 December 1962 and scanning it for just 42 minutes. In that brief window it revealed cool clouds sitting over a surface of at least 425 degC (800 degF) - proof that Venus's thick atmosphere hides a genuinely hellish world underneath, not the tropical twin of Earth some had imagined."
+        },
+        {
+          "heading": "Pioneer 10: Fastest Spacecraft Ever Built",
+          "body": "Launched in March 1972, Pioneer 10 was the first spacecraft to cross the asteroid belt and the first to reach Jupiter. At launch it was the fastest spacecraft ever built, 51,670 km/h (32,107 mph), and it held the title of most remote human-made object until Voyager 1 overtook it in 1998. Its last signal arrived in 2003, and it is still drifting silently toward the star Aldebaran - due to arrive in over 2 million years."
+        },
+        {
+          "heading": "Mariner 10: The First Gravity Assist",
+          "body": "In 1974, Mariner 10 became the first spacecraft to visit Mercury - and the first ever to use a gravity assist, swinging past Venus on 5 February 1974 to bend its path onward toward the Sun. Across three separate Mercury flybys it sent back 12,000 photographs of a heavily cratered, Moon-like world, though its flight path happened to photograph the same side each time, leaving part of the planet completely unmapped."
+        },
+        {
+          "heading": "Vega 1 & 2: Balloons at Venus",
+          "body": "Launched by the Soviet Union in December 1984, Vega 1 and 2 flew past Venus and released landers plus instrument packages riding Teflon-coated balloons into the thick atmosphere. The balloons survived about 46 hours, radioing back cloud and wind data from an altitude where a human observer would have been crushed and cooked within minutes. Both probes then continued onward to fly past Halley's Comet in March 1986, turning one mission into two entirely different discoveries."
+        },
+        {
+          "heading": "Viking 1: First to Live on Mars",
+          "body": "NASA's Viking 1, launched in 1975, became the first spacecraft to land on and explore the surface of Mars in 1976, returning high-resolution photographs and sampling the Martian soil directly in search of signs of life. Its companion, Viking 2, landed weeks later on the opposite side of the planet, and together the two landers kept transmitting data from the Martian surface for years longer than engineers had ever planned for."
+        },
+        {
+          "heading": "Voyager: The Grand Tour",
+          "body": "Launched in 1977, Voyager 1 and 2 toured the outer planets on a trajectory so rare it only lines up once every 176 years. Voyager 2 alone flew past Jupiter (1979), Saturn (1981), Uranus (1986), and Neptune (1989) - a single spacecraft visiting four worlds by riding each planet's gravity on to the next. Both probes are still transmitting today from interstellar space, decades past their original mission."
+        },
+        {
+          "heading": "Surveyor: Paving the Way for Apollo",
+          "body": "NASA's Surveyor program soft-landed seven robotic spacecraft on the Moon in the late 1960s, returning 87,674 photographs between them and proving the landing techniques - and scouting the terrain - that the crewed Apollo missions would depend on just a few years later. Surveyor 3 even sampled the lunar soil directly, and Apollo 12's astronauts later retrieved pieces of it to study how two and a half years on the Moon had aged its hardware."
+        },
+        {
+          "heading": "Modern Mars Rovers: Curiosity and Perseverance",
+          "body": "NASA's car-sized Curiosity rover landed in Gale Crater in August 2012 and is still exploring today, while its twin-in-design successor Perseverance launched in July 2020 and touched down in February 2021 at Jezero Crater - an ancient river delta chosen for its potential to preserve signs of past microbial life. Both run on a plutonium power source good for decades rather than fragile solar panels, and Perseverance's MOXIE instrument proved astronauts could one day make breathable oxygen from the Martian atmosphere itself. It also carried Ingenuity, the first aircraft to fly on another planet, which completed 72 flights before retiring in 2024."
+        }
+      ]
+    },
+    {
+      "id": "iss",
+      "displayName": "International Space Station",
+      "subtitle": "Humanity's outpost in orbit",
+      "iconName": "topic_iss",
+      "facts": [
+        {
+          "heading": "A Truly International Effort",
+          "body": "The ISS is a partnership of 15 to 16 nations - the United States, Canada, Japan, Russia, and 11 member states of the European Space Agency - making it one of the largest cooperative engineering projects in history. Components built on different continents had to fit together perfectly on the first try in orbit, with no factory nearby to fix a mistake, which makes its record of successful assembly even more remarkable."
+        },
+        {
+          "heading": "Built Piece by Piece",
+          "body": "Construction began in November 1998 when Russia's Proton rocket launched Zarya, the station's first module. Russia's Zvezda module followed in December 1998, providing the first living quarters, and after further assembly flights the first 3-person crew arrived by Soyuz for a 5-month stay. The ISS has been continuously, permanently inhabited ever since - the longest unbroken human presence in space in history."
+        },
+        {
+          "heading": "Bigger Than You'd Think",
+          "body": "The completed station spans about 109 m (356 ft) across its truss and 88 m (290 ft) along its modules, with a mass of roughly 420,000 kg (925,000 lb). Its pressurized living space totals about 935 cubic meters (33,000 cubic feet) - roughly the same volume as a five-bedroom house - all of it assembled 400 km above Earth from pieces that were each individually launched, docked, and bolted together by hand."
+        },
+        {
+          "heading": "Solar Power on a Massive Scale",
+          "body": "The ISS carries 8 pairs of solar panels, each 73 m (240 ft) long - longer than the wingspan of a Boeing 777. Together, more than 262,000 individual solar cells can generate up to 110 kW of power, and the whole array rotates continuously to track the Sun as the station circles the planet once every 90 minutes, keeping the lights, labs, and life-support systems running non-stop."
+        },
+        {
+          "heading": "Six Laboratories in Orbit",
+          "body": "The station's science comes from 6 main laboratories: a US lab, two Russian research modules, Japan's Experiment Module (with its own external \"back porch\" for experiments directly exposed to space), and ESA's Columbus Orbital Facility. Together they offer 33 International Standard Payload Racks for research, turning the ISS into one of the most productive science facilities ever built - one that just happens to orbit the Earth."
+        },
+        {
+          "heading": "The Backbone and the Arm",
+          "body": "A central US-built Integrated Truss Structure carries the station's main solar arrays, which rotate to track the Sun as the ISS orbits. The Canadian-built robotic arm system - a 55-foot arm plus the Special Purpose Dexterous Manipulator - rides along the truss on its own mobile base, letting crews assemble, maintain, and even capture visiting cargo spacecraft from inside the station."
+        },
+        {
+          "heading": "A Constant Stream of Visitors",
+          "body": "Over the ISS's lifetime, crew and cargo have arrived aboard the piloted Space Shuttle and Soyuz, and Russia's uncrewed Progress and Europe's uncrewed Automated Transfer Vehicle (ATV) for resupply. An emergency crew-return vehicle always stays docked whenever the station is inhabited, ready to bring the entire crew home on short notice if anything ever forced an evacuation - a lifeboat that has thankfully never had to be used."
+        },
+        {
+          "heading": "Science Every Single Day",
+          "body": "Crews run experiments daily in human biology, medical research, physical sciences, and Earth observation - from growing protein crystals that are impossible to grow properly under gravity, to developing new metal alloys that only mix evenly in freefall. Hundreds of scientists on the ground design and monitor these experiments alongside the crew, turning the station into a laboratory that never really closes."
+        },
+        {
+          "heading": "A Milestone Spacewalk",
+          "body": "In 2019, US astronauts Christina Koch and Jessica Meir completed the first all-female spacewalk outside the ISS, stepping out together to replace a failed power-regulation device on the station's exterior. The spacewalk had originally been planned a few months earlier but was postponed for lack of a second correctly-sized spacesuit in orbit - a scheduling hiccup that made headlines in its own right."
+        },
+        {
+          "heading": "A New Way to Reach the Station",
+          "body": "After the Space Shuttle retired in 2011, NASA depended entirely on Russia's Soyuz to ferry astronauts to the ISS for nearly a decade. That changed in May 2020, when SpaceX's Crew Dragon carried astronauts Bob Behnken and Doug Hurley to the station on the Demo-2 test flight - the first crewed orbital launch from American soil since the Shuttle era, developed under NASA's Commercial Crew Program. Crew Dragon has flown every NASA crew rotation since, while Boeing's Starliner, developed alongside it, is still working toward its own first operational flight."
+        }
+      ]
+    }
+  ]
+}

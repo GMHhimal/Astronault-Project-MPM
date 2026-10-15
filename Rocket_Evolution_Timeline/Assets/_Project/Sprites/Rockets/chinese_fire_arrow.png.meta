@@ -116,10 +116,10 @@ TextureImporter:
       name: chinese_fire_arrow_0
       rect:
         serializedVersion: 2
-        x: 179
-        y: 40
-        width: 156
-        height: 433
+        x: 103
+        y: 43
+        width: 104
+        height: 811
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}

@@ -6,9 +6,39 @@
       "correctZoneId": "13TH_CENTURY",
       "zoneLabel": "13th Century",
       "country": "China",
-      "keyAdvance": "The world's first gunpowder-propelled rocket and the earliest multi-stage rocket design.",
-      "triviaFact": "True self-propelled rocket versions became widespread across China by the 12th-13th centuries.",
+      "keyAdvance": "The world's first gunpowder-propelled rocket, first used in battle at Kai-Keng in 1232 against Mongol invaders.",
+      "triviaFact": "The word \"rocket\" traces back to the Italian rocchetta, meaning \"little spindle\" - a nod to the long, thin tube shape these early fire arrows shared with a spinning bobbin.",
       "spriteName": "chinese_fire_arrow"
+    },
+    {
+      "id": "wan_hu_chair",
+      "displayName": "Wan Hu's Rocket Chair",
+      "correctZoneId": "16TH_CENTURY",
+      "zoneLabel": "16th Century (Legend)",
+      "country": "China",
+      "keyAdvance": "A legendary attempt at the world's first crewed rocket flight: a chair fitted with 47 gunpowder rockets and two kites, meant to launch a person into the sky.",
+      "triviaFact": "The story says Wan Hu vanished in a cloud of smoke the moment the rockets were lit, and was never seen again - no record confirms it actually happened, but the tale has been told for centuries as rocketry's first (failed) human spaceflight attempt.",
+      "spriteName": "wan_hu_chair"
+    },
+    {
+      "id": "tipu_sultan_rockets",
+      "displayName": "Mysorean Rockets",
+      "correctZoneId": "LATE_18TH_CENTURY",
+      "zoneLabel": "Late 1700s",
+      "country": "India",
+      "keyAdvance": "The first iron-cased military rockets, giving them more range and thrust than the fragile bamboo and paper rockets used elsewhere at the time.",
+      "triviaFact": "Fielded by Hyder Ali and his son Tipu Sultan, the Kingdom of Mysore's rocket corps numbered about 5,000 soldiers - roughly a seventh of the entire army - and their battlefield success against British forces directly inspired Britain to develop its own military rockets.",
+      "spriteName": "tipu_sultan_rockets"
+    },
+    {
+      "id": "congreve_rocket",
+      "displayName": "Congreve Rocket",
+      "correctZoneId": "1805",
+      "zoneLabel": "1805",
+      "country": "United Kingdom",
+      "keyAdvance": "The first standardized, mass-produced military rocket system in the West, developed by Colonel William Congreve after studying captured Indian rockets.",
+      "triviaFact": "Congreve rockets bombarding Fort McHenry in the War of 1812 inspired the line \"the rocket's red glare\" in what later became \"The Star-Spangled Banner.\"",
+      "spriteName": "congreve_rocket"
     },
     {
       "id": "goddard_nell",
@@ -16,8 +46,8 @@
       "correctZoneId": "1926",
       "zoneLabel": "1926",
       "country": "United States",
-      "keyAdvance": "The world's first liquid-propellant rocket, launched by Robert Goddard on March 26, 1926.",
-      "triviaFact": "Its historic first flight lasted only 2.5 seconds and the rocket landed in a nearby cabbage patch.",
+      "keyAdvance": "The world's first liquid-propellant rocket, launched by Robert Goddard on March 16, 1926.",
+      "triviaFact": "That historic first flight lasted just 2.5 seconds, climbed only 41 feet, and landed in a cabbage patch 184 feet away - a flight so modest it's still called \"the liquid rocket's Kitty Hawk.\"",
       "spriteName": "goddard_nell"
     },
     {
@@ -26,8 +56,8 @@
       "correctZoneId": "1942_1944",
       "zoneLabel": "1942 - 1944",
       "country": "Germany",
-      "keyAdvance": "The first long-range ballistic missile and the first rocket capable of reaching space.",
-      "triviaFact": "The V-2 was the first man-made object to reach the edge of space.",
+      "keyAdvance": "The first long-range ballistic missile and the first human-made object to reach space, developed under Wernher von Braun at Peenemünde.",
+      "triviaFact": "After World War II, \"Operation Paperclip\" brought roughly 500 German rocket scientists and about 60 V-2s to the United States, while the Soviet Union took the production facilities and a similar number of rockets - seeding both space programs from the same source. A single V-2 stood about 14 m (46 ft) tall, weighed roughly 12,500 kg (27,600 lb) fully fueled, and carried a 1,000 kg (2,200 lb) warhead. Its single engine burned ethanol-water fuel with liquid oxygen to send the missile on a largely unguided ballistic arc reaching about four times the speed of sound over a range of roughly 320 km (200 mi).",
       "spriteName": "v2_aggregat4"
     },
     {
@@ -36,9 +66,49 @@
       "correctZoneId": "1957",
       "zoneLabel": "1957",
       "country": "Soviet Union (USSR)",
-      "keyAdvance": "The first orbital launch vehicle in history, launched on October 4, 1957.",
-      "triviaFact": "The R-7 is the only rocket family that has been continuously flying, in evolved form, since the dawn of the Space Age - the longest-serving rocket design in history.",
+      "keyAdvance": "The first orbital launch vehicle in history, launching Sputnik 1 on October 4, 1957.",
+      "triviaFact": "The R-7 is the longest-serving rocket family ever built - a month after Sputnik 1, an R-7 launched Sputnik 2 carrying the dog Laika, the first living creature to reach orbit. Its core is flanked by four strap-on boosters, each driven by a four-chamber RD-107 engine, clustered around a central four-chamber RD-108 engine - 20 combustion chambers in all, burning kerosene and liquid oxygen for a combined liftoff thrust of roughly 5,000 kN (1.1 million lbf) from a vehicle weighing about 280 tonnes fully fueled. Descendants of this same basic design, continuously refined for almost seven decades, still launch Soyuz crews to the International Space Station today.",
       "spriteName": "r7_sputnik"
+    },
+    {
+      "id": "explorer1_juno",
+      "displayName": "Explorer 1 / Juno I",
+      "correctZoneId": "1958",
+      "zoneLabel": "1958",
+      "country": "United States",
+      "keyAdvance": "America's answer to Sputnik: the first US satellite in orbit, launched January 31, 1958 on a repurposed Redstone missile called Juno I.",
+      "triviaFact": "Explorer 1 weighed just 30.66 pounds, but its onboard instruments made one of the great discoveries of the Space Age - the Van Allen radiation belts circling Earth.",
+      "spriteName": "explorer1_juno"
+    },
+    {
+      "id": "x15",
+      "displayName": "X-15",
+      "correctZoneId": "1959_1968",
+      "zoneLabel": "1959 - 1968",
+      "country": "United States",
+      "keyAdvance": "A rocket-powered airplane that bridged the gap between atmospheric flight and spaceflight, flying to the edge of space and back under its own wings.",
+      "triviaFact": "Across 199 flights, the X-15 reached 4,520 mph and 67 miles altitude - and future Apollo 11 commander Neil Armstrong was one of its twelve pilots.",
+      "spriteName": "x15"
+    },
+    {
+      "id": "mercury_redstone",
+      "displayName": "Mercury-Redstone",
+      "correctZoneId": "1961",
+      "zoneLabel": "1961",
+      "country": "United States",
+      "keyAdvance": "A modified Redstone ballistic missile adapted to launch NASA's one-person Mercury capsule, putting the first American into space on a suborbital arc.",
+      "triviaFact": "On May 5, 1961, Alan Shepard rode Freedom 7 on a 15-minute-22-second suborbital hop - just 346,944 newtons (78,000 lb) of thrust from an engine burning ethyl alcohol, water, and liquid oxygen - barely three weeks before President Kennedy committed America to landing on the Moon. Standing 25.4 m (83 ft) tall and weighing about 30,000 kg (66,000 lb) fully fueled, the Mercury-Redstone flew exactly two crewed missions - Shepard's Freedom 7 and Gus Grissom's Liberty Bell 7 that July - before NASA moved on to the more powerful Atlas rocket for the Mercury program's four later orbital flights.",
+      "spriteName": "mercury_redstone"
+    },
+    {
+      "id": "gemini_titan",
+      "displayName": "Gemini-Titan II",
+      "correctZoneId": "1965_1966",
+      "zoneLabel": "1965 - 1966",
+      "country": "United States",
+      "keyAdvance": "A modified Air Force ICBM that launched NASA's two-person Gemini capsules, proving the rendezvous, docking, and spacewalk techniques Apollo would need to reach the Moon.",
+      "triviaFact": "Gemini 8's Neil Armstrong and David Scott achieved the first-ever docking in space in March 1966; Ed White made the first American spacewalk on Gemini 4 two months earlier; and Gemini 7 set the era's endurance record - 330 hours 35 minutes, nearly 14 days, 206 orbits. Adapted from an Air Force ICBM, the two-stage Titan II stood about 33 m (109 ft) tall, weighed around 154,200 kg (340,000 lb) at liftoff, and produced roughly 2,090 kN (470,000 lbf) of thrust from hypergolic engines burning Aerozine 50 fuel with nitrogen tetroxide - propellants that ignite on contact, making it simpler and more reliable to launch on short notice than earlier cryogenic designs. It carried ten crewed Gemini missions in all, from Gemini 3 through Gemini 12.",
+      "spriteName": "gemini_titan"
     },
     {
       "id": "saturn_v",
@@ -46,8 +116,8 @@
       "correctZoneId": "1967_1969",
       "zoneLabel": "1967 - 1969",
       "country": "United States",
-      "keyAdvance": "The most powerful rocket ever flown successfully, with the capability to send astronauts to the Moon.",
-      "triviaFact": "At 363 feet tall, Saturn V was taller than the Statue of Liberty and generated the thrust of 85 Hoover Dams.",
+      "keyAdvance": "The most powerful rocket ever flown successfully at the time - 110.6 m (363 ft) tall, generating over 33 million newtons (7.5 million lb) of first-stage thrust alone - built to send astronauts to the Moon.",
+      "triviaFact": "Saturn V was taller than the Statue of Liberty and generated the thrust of 85 Hoover Dams at liftoff; its three stages produced 7.5 million, 1 million, and 200,000 pounds of thrust in turn - and a modified third stage later launched Skylab, America's first space station, in 1973. Each of the first stage's five F-1 engines produced about 1.5 million pounds-force of thrust burning RP-1 kerosene with liquid oxygen, while the upper stages switched to J-2 engines burning liquid hydrogen for a sharper 421-second specific impulse in vacuum. NASA rated the fully stacked vehicle to place up to 311,000 lb (141,000 kg) into low Earth orbit, and its last three Moon-bound flights each carried about 96,000 lb (43,500 kg) on toward the Moon.",
       "spriteName": "saturn_v"
     },
     {
@@ -56,9 +126,19 @@
       "correctZoneId": "1981",
       "zoneLabel": "1981",
       "country": "United States",
-      "keyAdvance": "The first reusable orbital spacecraft, first launched on April 12, 1981.",
-      "triviaFact": "Its Solid Rocket Boosters were recovered from the ocean after launch and flown again on later missions.",
+      "keyAdvance": "The first reusable orbital spacecraft - a 4-part stack of a reusable Orbiter, two recoverable Solid Rocket Boosters, and one expendable External Tank - first launched April 12, 1981.",
+      "triviaFact": "STS-1's crew of John Young and Robert Crippen were the first ever to ride a brand-new space vehicle on its maiden flight. Its 3 main engines and twin SRBs made 7.3 million pounds of combined thrust at liftoff - and over 135 missions, the 5-orbiter fleet carried more astronauts than every other rocket in history combined. Each Solid Rocket Booster carried about 1.1 million pounds of solid propellant and together supplied roughly 80% of the Shuttle's thrust for its first two minutes of flight, before burning out and parachuting into the Atlantic for reuse. The three Space Shuttle Main Engines, throttleable from 65% up to 109% of rated power, drew from an External Tank holding 526,000 gallons of liquid hydrogen and liquid oxygen - consumed at roughly 62,300 gallons a minute during the climb to orbit.",
       "spriteName": "space_shuttle"
+    },
+    {
+      "id": "delta_iv_heavy",
+      "displayName": "Delta IV Heavy",
+      "correctZoneId": "2004",
+      "zoneLabel": "2004",
+      "country": "United States",
+      "keyAdvance": "One of the most powerful rockets of its generation, built by strapping three Delta IV boosters side by side to triple the available thrust.",
+      "triviaFact": "Delta IV Heavy's hydrogen-fueled engines ignite in a deliberate fireball at the base of the rocket moments before liftoff - a dramatic, expected sight that's become the rocket's visual signature. Standing 70.7 m (232 ft) tall and weighing about 733,000 kg (1.6 million lb) at liftoff, its three Common Booster Cores each carry a single RS-68 engine, together producing roughly 9,420 kN (2.1 million lbf) of combined thrust - enough to lift about 28,370 kg (62,550 lb) to low Earth orbit. Its final flight launched a classified US national security payload in April 2024, retiring the rocket after two decades of service.",
+      "spriteName": "delta_iv_heavy"
     },
     {
       "id": "falcon_9",
@@ -67,8 +147,28 @@
       "zoneLabel": "2015 - 2017",
       "country": "United States",
       "keyAdvance": "The first orbital-class rocket booster to land and be reused.",
-      "triviaFact": "Falcon 9 achieved the first successful vertical landing of an orbital booster in December 2015, and the first re-flight of a used booster in March 2017.",
+      "triviaFact": "Falcon 9 achieved the first successful vertical landing of an orbital booster in December 2015 and the first re-flight of a used booster in March 2017 - and its Dragon spacecraft became the first privately built and recovered orbital spacecraft in history. Standing 70 m (230 ft) tall and 3.7 m (12 ft) wide, its first stage's nine Merlin engines together produce about 1.7 million pounds-force of thrust at liftoff burning RP-1 kerosene with liquid oxygen, while four grid fins and deployable legs let the booster fly itself back down tail-first for reuse. A fully expendable Falcon 9 can deliver roughly 22,800 kg (50,265 lb) to low Earth orbit, per SpaceX's own published specifications.",
       "spriteName": "falcon_9"
+    },
+    {
+      "id": "new_shepard",
+      "displayName": "New Shepard",
+      "correctZoneId": "2021",
+      "zoneLabel": "2021",
+      "country": "United States",
+      "keyAdvance": "A fully reusable suborbital rocket built specifically to carry paying passengers just past the edge of space and back.",
+      "triviaFact": "Named after Alan Shepard, the first American in space, New Shepard has flown more than a dozen crews on short suborbital hops that give passengers several minutes of weightlessness before parachuting back to the Texas desert. Its single BE-3 engine burns liquid hydrogen and liquid oxygen and can throttle down to about 18% power, producing up to 490 kN (110,000 lbf) of thrust - precise enough to land the booster itself tail-first back at the launch site for reuse. Its very first test flight in April 2015 reached roughly 93,500 m (307,000 ft), just past the Karman line widely used to mark the edge of space.",
+      "spriteName": "new_shepard"
+    },
+    {
+      "id": "sls",
+      "displayName": "SLS (Space Launch System)",
+      "correctZoneId": "2022",
+      "zoneLabel": "2022",
+      "country": "United States",
+      "keyAdvance": "NASA's super heavy-lift rocket for the Artemis program, designed to send astronauts and large cargo back to the Moon.",
+      "triviaFact": "At 322 feet tall, SLS is taller than the Statue of Liberty and produces 15% more thrust than the Saturn V - its first flight, Artemis I, sent an uncrewed Orion capsule 280,000 miles from Earth, farther than any spacecraft built for humans had ever traveled. Its core stage is powered by four RS-25 engines - the same engine design that powered the Space Shuttle for over three decades across 135 missions - here throttled up to 109% of their original rated thrust (111% on later flights) for more than two million pounds-force of combined vacuum thrust. NASA's first three SLS flights even reuse genuine veteran engines flown on past Shuttle missions before newly built RS-25s take over.",
+      "spriteName": "sls"
     },
     {
       "id": "starship",
@@ -77,7 +177,7 @@
       "zoneLabel": "2023",
       "country": "United States",
       "keyAdvance": "A fully reusable super-heavy lift vehicle designed for Moon and Mars missions.",
-      "triviaFact": "Starship is the largest rocket ever built, and its April 2023 flight was the first integrated test of the full vehicle.",
+      "triviaFact": "Starship is the largest and most powerful rocket ever built, and its April 2023 flight was the first integrated test of the full two-stage vehicle. Its Super Heavy booster stands about 71 m (233 ft) tall and 9 m (30 ft) wide, with 33 Raptor engines burning methane and liquid oxygen - a \"methalox\" mix chosen partly because methane can be manufactured on Mars - to produce more than 73 meganewtons (16.5 million pounds-force) of thrust at full power, easily surpassing the Saturn V's. The booster alone carries about 3,400 tonnes of propellant, roughly 2,700 tonnes of liquid oxygen and 700 tonnes of methane.",
       "spriteName": "starship"
     }
   ]

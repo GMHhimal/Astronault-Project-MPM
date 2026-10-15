@@ -5,12 +5,6 @@ TextureImporter:
   - first:
       213: -7772872588036895719
     second: space_shuttle_0
-  - first:
-      213: -829319356329238626
-    second: space_shuttle_1
-  - first:
-      213: -2604845461489343878
-    second: space_shuttle_2
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -122,10 +116,10 @@ TextureImporter:
       name: space_shuttle_0
       rect:
         serializedVersion: 2
-        x: 189
-        y: 70
-        width: 31
-        height: 323
+        x: 30
+        y: 39
+        width: 320
+        height: 740
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -136,50 +130,6 @@ TextureImporter:
       bones: []
       spriteID: 91c80b94095312490800000000000000
       internalID: -7772872588036895719
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: space_shuttle_1
-      rect:
-        serializedVersion: 2
-        x: 225
-        y: 80
-        width: 63
-        height: 343
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: e9fd3a8707aad74f0800000000000000
-      internalID: -829319356329238626
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: space_shuttle_2
-      rect:
-        serializedVersion: 2
-        x: 293
-        y: 70
-        width: 95
-        height: 323
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: a72a3259adab9dbd0800000000000000
-      internalID: -2604845461489343878
       vertices: []
       indices: 
       edges: []

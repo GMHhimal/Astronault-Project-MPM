@@ -8,9 +8,6 @@ TextureImporter:
   - first:
       213: -6926257821701714863
     second: r7_sputnik_1
-  - first:
-      213: 8035211510900543715
-    second: r7_sputnik_2
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -122,10 +119,10 @@ TextureImporter:
       name: r7_sputnik_0
       rect:
         serializedVersion: 2
-        x: 153
-        y: 60
-        width: 67
-        height: 283
+        x: 25
+        y: 50
+        width: 279
+        height: 805
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -144,10 +141,10 @@ TextureImporter:
       name: r7_sputnik_1
       rect:
         serializedVersion: 2
-        x: 215
-        y: 45
-        width: 83
-        height: 413
+        x: 131
+        y: 43
+        width: 68
+        height: 8
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -158,28 +155,6 @@ TextureImporter:
       bones: []
       spriteID: 15cc2b2453df0ef90800000000000000
       internalID: -6926257821701714863
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: r7_sputnik_2
-      rect:
-        serializedVersion: 2
-        x: 293
-        y: 60
-        width: 67
-        height: 283
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 3e05b5afb4ec28f60800000000000000
-      internalID: 8035211510900543715
       vertices: []
       indices: 
       edges: []
