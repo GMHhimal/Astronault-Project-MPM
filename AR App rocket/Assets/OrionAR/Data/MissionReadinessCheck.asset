@@ -1,0 +1,152 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f1c133710d7e53d40ae4e4dbbf0dc365, type: 3}
+  m_Name: MissionReadinessCheck
+  m_EditorClassIdentifier: Assembly-CSharp::OrionAR.QuizData
+  title: MISSION READINESS CHECK
+  intro: Ten questions on the spacecraft and the physics of spaceflight. Score 80%
+    or better and you are cleared to fly the burn home.
+  passFraction: 0.8
+  shuffleQuestions: 1
+  shuffleOptions: 1
+  questions:
+  - prompt: A rocket engine fires in the vacuum of space, with nothing to push against.
+      Why does the rocket still accelerate?
+    options:
+    - The engine throws mass out of the nozzle, and the reaction pushes the rocket
+      the other way
+    - The exhaust gas pushes against the surrounding air
+    - Burning fuel reduces the rocket's weight, so it rises
+    - The nozzle creates a vacuum ahead of the rocket that pulls it forward
+    correctIndex: 0
+    explanation: "Newton's third law. The rocket pushes propellant backwards and
+      the propellant pushes the rocket forwards. Air is irrelevant \u2014 rockets
+      work better in vacuum, with no drag."
+    relatedPartId: main_engine
+    topic: PROPULSION
+  - prompt: Mass fraction is defined as the mass of propellant divided by the total
+      mass of the rocket. What is the mass fraction of an ideal rocket?
+    options:
+    - About 0.91
+    - Exactly 1.0
+    - About 0.50
+    - About 0.25
+    correctIndex: 0
+    explanation: Roughly 91% propellant, 3% structure and engines, 6% payload. A
+      mass fraction of 1.0 would be nothing but propellant with no tank, structure
+      or payload at all.
+    relatedPartId: service_module
+    topic: MASS FRACTION
+  - prompt: "Why does staging \u2014 dropping empty sections during flight \u2014
+      let a rocket reach far higher speeds?"
+    options:
+    - The remaining engines no longer have to accelerate empty tanks and structure
+    - Each stage adds its speed to the one before, multiplying the total
+    - Dropping mass lets the rocket fall faster toward its target
+    - Separation shocks give the upper stage an extra push
+    correctIndex: 0
+    explanation: Once a tank is empty it is dead mass. Discarding it means every
+      remaining kilogram of propellant accelerates a lighter vehicle, which is why
+      staging made reaching the Moon possible.
+    relatedPartId: service_module
+    topic: STAGING
+  - prompt: Specific impulse is quoted in seconds. What does it actually measure?
+    options:
+    - How much thrust an engine produces per unit weight of propellant consumed per
+      second
+    - How many seconds the engine can burn before running out of propellant
+    - How long the engine takes to reach full thrust after ignition
+    - The number of seconds of thrust needed to reach orbit
+    correctIndex: 0
+    explanation: Specific impulse is efficiency, not duration. A higher figure means
+      more velocity change from the same mass of propellant. Orion's main engine
+      delivers about 316 seconds in vacuum.
+    relatedPartId: main_engine
+    topic: PROPULSION
+  - prompt: What condition must be met at the instant of liftoff?
+    options:
+    - Thrust must exceed the total weight of the vehicle
+    - Thrust must equal the total weight of the vehicle
+    - The vehicle must already be moving upward
+    - Mass fraction must be greater than 0.95
+    correctIndex: 0
+    explanation: If thrust only equals weight the rocket hovers; it has to exceed
+      weight to accelerate off the pad. This is why a heavy vehicle with unnecessary
+      mass never leaves the ground.
+    relatedPartId: main_engine
+    topic: LAUNCH
+  - prompt: A rocket is stable in flight when the centre of pressure sits where,
+      relative to the centre of mass?
+    options:
+    - Behind the centre of mass, toward the tail
+    - Ahead of the centre of mass, toward the nose
+    - Exactly on the centre of mass
+    - Position makes no difference to stability
+    correctIndex: 0
+    explanation: With the centre of pressure behind the centre of mass, aerodynamic
+      forces push the rocket back onto its heading. Ahead of it, any disturbance
+      is amplified and the vehicle tumbles. This is why fins sit at the tail.
+    relatedPartId: back_shell
+    topic: STABILITY
+  - prompt: What does escape velocity mean for a spacecraft leaving the Moon?
+    options:
+    - The speed at which it can coast away without ever falling back
+    - The speed needed to enter a circular orbit just above the surface
+    - The maximum safe speed for leaving the lunar surface
+    - The speed of the spacecraft relative to the Earth
+    correctIndex: 0
+    explanation: Escape velocity is the speed at which kinetic energy balances gravitational
+      binding energy. At 120 km above the Moon it is about 2,300 m/s, against 1,625
+      m/s for a circular orbit.
+    relatedPartId: main_engine
+    topic: ORBITS
+  - prompt: In the Artemis architecture, where is Orion while astronauts walk on
+      the lunar surface?
+    options:
+    - "In lunar orbit \u2014 Orion never lands, a separate lander carries the crew
+      down"
+    - Landed beside the crew, waiting to lift off again
+    - Already on its way back to Earth, returning later to collect them
+    - Docked to a station on the lunar surface
+    correctIndex: 0
+    explanation: Orion is a deep-space transport, not a lander. It has no landing
+      legs and no descent engine. A dedicated lander takes the crew to the surface
+      and back to Orion in lunar orbit.
+    relatedPartId: service_module
+    topic: MISSION DESIGN
+  - prompt: "Orion's heat shield reaches about 2,760\_\xB0C on return from the Moon.
+      How does it protect the crew?"
+    options:
+    - The material chars and erodes away, carrying the heat off with it
+    - A coolant loop circulates water behind the shield to absorb the heat
+    - The shield reflects the heat back into the atmosphere
+    - The shield conducts the heat into the structure, which spreads it out
+    correctIndex: 0
+    explanation: 'It is ablative: the material is sacrificial. It chars and sheds,
+      and the departing material takes the heat energy with it rather than conducting
+      it into the cabin.'
+    relatedPartId: heat_shield
+    topic: RE-ENTRY
+  - prompt: The carbon dioxide scrubber fails on the way home. Why is this an emergency
+      within hours rather than days?
+    options:
+    - "Exhaled CO\u2082 builds up and impairs the crew long before the oxygen runs
+      out"
+    - Carbon dioxide is flammable and risks a cabin fire
+    - The scrubber also generates all of the cabin's oxygen
+    - "Rising CO\u2082 causes cabin pressure to fall rapidly"
+    correctIndex: 0
+    explanation: "There is plenty of oxygen left. It is the CO\u2082 the crew exhale,
+      with nowhere to go, that degrades judgement above about 1% and incapacitates
+      at a few percent."
+    relatedPartId: eclss
+    topic: LIFE SUPPORT

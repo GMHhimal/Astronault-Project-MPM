@@ -1,0 +1,27 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fef1d5db3b8c27f408c03813ced651de, type: 3}
+  m_Name: Part_docking_hatch
+  m_EditorClassIdentifier: Assembly-CSharp::OrionAR.PartInfo
+  partId: docking_hatch
+  displayName: Forward Docking Hatch
+  shortName: Docking Hatch
+  zone: 1
+  order: 170
+  keySpec: Overhead crew transfer tunnel
+  summary: The hatch above the cabin, leading to the docking adapter. This is the
+    route the crew take to transfer into Gateway or a lunar lander once docked.
+  whyItMatters: "Before it can be opened, the crew pressurise the tunnel between
+    the two hatches and watch it hold, confirming a good seal before committing.
+    In microgravity an overhead hatch is no harder to use than a side one \u2014
+    orientation inside a spacecraft is a matter of convention, not gravity."
+  narration: {fileID: 0}

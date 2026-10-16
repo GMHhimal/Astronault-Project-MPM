@@ -1,0 +1,27 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fef1d5db3b8c27f408c03813ced651de, type: 3}
+  m_Name: Part_crew_seats
+  m_EditorClassIdentifier: Assembly-CSharp::OrionAR.PartInfo
+  partId: crew_seats
+  displayName: Crew Seats and Restraints
+  shortName: Crew Seats
+  zone: 1
+  order: 100
+  keySpec: "Four crew  \xB7  shock-attenuating pallet"
+  summary: Four custom-fitted seats on a shock-attenuating pallet. They are the crew's
+    primary protection during launch and splashdown, not just furniture.
+  whyItMatters: "The seats are angled so acceleration is taken through the chest
+    and back rather than along the spine \u2014 the direction the human body tolerates
+    worst. The struts are tuned to each astronaut's mass, because a heavier crew
+    member needs a different energy-absorbing profile to see the same deceleration."
+  narration: {fileID: 0}

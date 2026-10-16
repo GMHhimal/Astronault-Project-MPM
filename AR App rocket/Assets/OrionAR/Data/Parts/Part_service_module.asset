@@ -1,0 +1,27 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fef1d5db3b8c27f408c03813ced651de, type: 3}
+  m_Name: Part_service_module
+  m_EditorClassIdentifier: Assembly-CSharp::OrionAR.PartInfo
+  partId: service_module
+  displayName: European Service Module
+  shortName: Service Module
+  zone: 2
+  order: 60
+  keySpec: "4.1 m diameter  \xB7  8.6 t propellant"
+  summary: Built by ESA and Airbus, this is Orion's engine room. It carries the propulsion,
+    propellant, electrical power, water, oxygen and thermal radiators, and supplies
+    all of it to the crew module through an umbilical.
+  whyItMatters: "It is jettisoned before re-entry and burns up. Keeping everything
+    that does not need to survive 2,760\_\xB0C outside the part that does means the
+    heat shield protects 8.5 tonnes instead of the full 26-tonne stack."
+  narration: {fileID: 0}

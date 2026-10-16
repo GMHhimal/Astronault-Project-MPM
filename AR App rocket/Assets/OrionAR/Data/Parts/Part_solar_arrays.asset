@@ -1,0 +1,26 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fef1d5db3b8c27f408c03813ced651de, type: 3}
+  m_Name: Part_solar_arrays
+  m_EditorClassIdentifier: Assembly-CSharp::OrionAR.PartInfo
+  partId: solar_arrays
+  displayName: Solar Array Wings
+  shortName: Solar Arrays
+  zone: 2
+  order: 70
+  keySpec: "Four wings  \xB7  19 m span  \xB7  11.2 kW"
+  summary: "Four wings of gallium-arsenide cells spanning 19 metres deployed \u2014
+    enough power for two family homes. Each pivots on two axes to track the Sun as
+    the spacecraft manoeuvres."
+  whyItMatters: The wings must rotate clear before the main engine fires. The exhaust
+    plume is hot, fast and erosive, and would damage any panel left in its path.
+  narration: {fileID: 0}

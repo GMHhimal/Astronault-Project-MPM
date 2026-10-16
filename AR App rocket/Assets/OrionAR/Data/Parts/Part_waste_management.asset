@@ -1,0 +1,26 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fef1d5db3b8c27f408c03813ced651de, type: 3}
+  m_Name: Part_waste_management
+  m_EditorClassIdentifier: Assembly-CSharp::OrionAR.PartInfo
+  partId: waste_management
+  displayName: Waste Management System
+  shortName: Waste System
+  zone: 1
+  order: 160
+  keySpec: Compact universal waste system
+  summary: The spacecraft toilet. Apollo crews used bags; Orion carries a proper
+    compact commode in a cabin the size of a small van.
+  whyItMatters: Without gravity, waste must be moved by airflow rather than falling.
+    A fan pulls air through a filtered separator, and the system is held slightly
+    below cabin pressure so air always flows inwards, never out.
+  narration: {fileID: 0}

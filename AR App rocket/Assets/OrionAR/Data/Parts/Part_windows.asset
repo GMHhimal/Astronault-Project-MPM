@@ -1,0 +1,27 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fef1d5db3b8c27f408c03813ced651de, type: 3}
+  m_Name: Part_windows
+  m_EditorClassIdentifier: Assembly-CSharp::OrionAR.PartInfo
+  partId: windows
+  displayName: Crew Module Windows
+  shortName: Windows
+  zone: 0
+  order: 40
+  keySpec: "Four windows  \xB7  multi-pane fused silica"
+  summary: 'Orion carries four windows for docking and for monitoring the vehicle.
+    Each is a serious engineering problem: a hole in a pressure vessel that must
+    also survive re-entry heating.'
+  whyItMatters: The outer pane is a thermal and debris shield. The inner panes are
+    the real pressure panes, and each one alone is strong enough to hold cabin pressure,
+    so a crack in any single pane cannot breach the cabin.
+  narration: {fileID: 0}

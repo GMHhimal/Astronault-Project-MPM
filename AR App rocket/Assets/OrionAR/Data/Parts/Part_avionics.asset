@@ -1,0 +1,28 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fef1d5db3b8c27f408c03813ced651de, type: 3}
+  m_Name: Part_avionics
+  m_EditorClassIdentifier: Assembly-CSharp::OrionAR.PartInfo
+  partId: avionics
+  displayName: Avionics and Flight Computers
+  shortName: Avionics
+  zone: 1
+  order: 140
+  keySpec: Redundant radiation-tolerant computers
+  summary: "Orion's flight computers, navigation sensors and data networks. Beyond
+    Earth's magnetic field there is no shielding from cosmic rays, and a single high-energy
+    particle can flip a bit in memory \u2014 a single event upset."
+  whyItMatters: 'The answer is redundancy and voting: several computers run the same
+    calculation and compare answers, so a corrupted result is outvoted rather than
+    acted on. The processors are deliberately generations behind consumer hardware,
+    because larger transistors are far harder for a cosmic ray to disturb.'
+  narration: {fileID: 0}

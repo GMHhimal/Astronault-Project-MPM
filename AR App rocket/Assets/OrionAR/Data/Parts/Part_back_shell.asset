@@ -1,0 +1,28 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fef1d5db3b8c27f408c03813ced651de, type: 3}
+  m_Name: Part_back_shell
+  m_EditorClassIdentifier: Assembly-CSharp::OrionAR.PartInfo
+  partId: back_shell
+  displayName: Back Shell and Thermal Protection
+  shortName: Back Shell
+  zone: 0
+  order: 20
+  keySpec: "Blunt 57.5\xB0 cone  \xB7  ~1,300 tiles"
+  summary: The cone covering everything above the heat shield. It does not face the
+    fiercest heating, but it must survive vacuum, micrometeoroid strikes and a swing
+    of hundreds of degrees between sunlight and shadow.
+  whyItMatters: The blunt shape is deliberately poor aerodynamics. A pointed nose
+    would hug its own shock wave; a blunt body pushes a detached bow shock well ahead
+    of the vehicle, so the atmosphere absorbs most of the entry energy instead of
+    the spacecraft.
+  narration: {fileID: 0}

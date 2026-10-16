@@ -1,0 +1,27 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fef1d5db3b8c27f408c03813ced651de, type: 3}
+  m_Name: Part_display_control_panel
+  m_EditorClassIdentifier: Assembly-CSharp::OrionAR.PartInfo
+  partId: display_control_panel
+  displayName: Display and Control Panel
+  shortName: Control Panel
+  zone: 1
+  order: 110
+  keySpec: Three reconfigurable displays
+  summary: Orion's glass cockpit. Apollo carried over 500 switches and dials; Orion
+    replaces almost all of it with three reconfigurable screens, borrowing heavily
+    from the Boeing 787 flight deck.
+  whyItMatters: 'Fewer physical switches means less mass and fewer failure points.
+    The switches that remain are the ones that must work when the software does not:
+    abort, and core life support.'
+  narration: {fileID: 0}

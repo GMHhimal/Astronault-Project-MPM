@@ -1,0 +1,28 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fef1d5db3b8c27f408c03813ced651de, type: 3}
+  m_Name: Part_stowage
+  m_EditorClassIdentifier: Assembly-CSharp::OrionAR.PartInfo
+  partId: stowage
+  displayName: Stowage and Consumables
+  shortName: Stowage
+  zone: 1
+  order: 150
+  keySpec: Food, water, equipment, waste
+  summary: 'Lockers holding everything the crew consumes or needs to hand: food,
+    water, clothing, medical kit, tools, and stowage for waste on the way home. In
+    microgravity nothing stays where it is put, so every item is strapped, clipped
+    or netted.'
+  whyItMatters: "Stowage is also a mass-balance problem. Orion steers during re-entry
+    by rolling, using a deliberately offset centre of gravity to generate lift \u2014
+    so where the cargo sits genuinely affects where the capsule lands."
+  narration: {fileID: 0}

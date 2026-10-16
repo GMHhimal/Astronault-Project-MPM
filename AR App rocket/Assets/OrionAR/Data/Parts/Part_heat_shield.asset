@@ -1,0 +1,30 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fef1d5db3b8c27f408c03813ced651de, type: 3}
+  m_Name: Part_heat_shield
+  m_EditorClassIdentifier: Assembly-CSharp::OrionAR.PartInfo
+  partId: heat_shield
+  displayName: Ablative Heat Shield
+  shortName: Heat Shield
+  zone: 0
+  order: 10
+  keySpec: "5.03 m diameter  \xB7  AVCOAT ablator"
+  summary: "The largest heat shield ever flown on a crewed spacecraft. Returning
+    from the Moon, Orion meets the atmosphere at about 40,000 km/h and the gas ahead
+    of the shield reaches roughly 2,760\_\xB0C.\n\nIt is ablative, not insulating.
+    The AVCOAT material \u2014 silica fibres in a resin, held in a fibreglass honeycomb
+    \u2014 is designed to char and erode away, carrying the heat off with the departing
+    material."
+  whyItMatters: The shield is consumed by design and cannot be reused. Protecting
+    the vehicle by throwing part of it away is cheaper in mass than any material
+    that could survive the heating intact.
+  narration: {fileID: 0}
