@@ -40,7 +40,31 @@ namespace RocketTimeline.EditorTools
         private const string RocketSpritesFolder = "Assets/_Project/Sprites/Rockets";
         private const string UISpritesFolder = "Assets/_Project/Sprites/UI";
         private const string BackgroundsFolder = "Assets/_Project/Sprites/Backgrounds";
+
+        // v22 (client: moving starfield background, "stars moving downwards
+        // like we are going up"). ScrollStarPanelHeight must stay an exact
+        // whole multiple of RocketSpriteImporter.ScrollStarTileSize (360) -
+        // see BuildScrollingStarfield/ScrollingStarfieldLayer for why. 1080
+        // matches the canvas's own reference height exactly (1080/360 = 3).
+        private const string ScrollStarTileName = "star_scroll_overlay";
+        private const float ScrollStarPanelHeight = 1080f;
+        // UI units/second - a slow, calm drift (about one full panel-height
+        // every 27 seconds), not a fast "warp speed" effect.
+        private const float ScrollStarSpeed = 40f;
         private const string TopicSpritesFolder = "Assets/_Project/Sprites/Topics";
+
+        // Telescopes section (added separately from the rocket timeline per
+        // client request, so it has its own Main Menu button rather than
+        // living inside the rocket drag-and-drop game - see
+        // BuildTelescopePanel and TelescopeItem.cs). Two sprite folders per
+        // entry: an actual photo of the telescope, and a real astrophotography
+        // image stylized as a circular "eyepiece" view of what it reveals.
+        private const string TelescopeHardwareSpritesFolder = "Assets/_Project/Sprites/Telescopes/Hardware";
+        private const string TelescopeViewSpritesFolder = "Assets/_Project/Sprites/Telescopes/Views";
+
+        // v20 (client: ambient background music, Interstellar-inspired, seamless
+        // loop): one clip, baked into both scenes via BuildAmbientMusic() below.
+        private const string MusicFolder = "Assets/_Project/Audio/Music";
 
         // Order here only affects the pool's starting sibling order in the
         // Hierarchy - GameManager shuffles the pool at Play time regardless.
@@ -141,14 +165,29 @@ namespace RocketTimeline.EditorTools
         private static readonly Vector2 PlacedRocketSize = new Vector2(148, 148);
 
         // v14: every Main Menu secondary-action button (Rocket Trivia + each
-        // About topic) is now built at this one fixed size, in one row
-        // (ActionRow - see BuildMainMenuSceneInternal), specifically because
-        // v13's mismatched button widths and separately-positioned About row
-        // was the client's own "make it symmetric and consistent" feedback.
-        // Text wraps to 2 lines within this box for the longest label
-        // ("About International Space Station") rather than the box
-        // resizing - see BonusButtonLabels just below.
-        private static readonly Vector2 ActionButtonSize = new Vector2(280, 76);
+        // About topic) used to be built at one fixed size in a single
+        // GridLayoutGroup row (ActionRow), because v13's mismatched button
+        // widths and separately-positioned About row was the client's own
+        // "make it symmetric and consistent" feedback.
+        //
+        // v16 (client: "the sub topic buttons... need to be more bigger and
+        // it is out of order... put them in symmetric manner"): that single
+        // grid grew to 3 uneven rows once Telescopes made it a 5th cell,
+        // overlapping PlayCaption above it and leaving the 5th button alone
+        // on its own row. Replaced with two separately-centered rows, each its
+        // own HorizontalLayoutGroup (see BuildMainMenuSceneInternal's
+        // PrimaryActionRow/SecondaryActionRow): a top row of exactly the two
+        // "encyclopedia" buttons (Rocket Trivia, Telescopes) at this larger
+        // size, and a second row of one button per TopicData.json entry at
+        // SecondaryActionButtonSize. Always exactly 2 rows - no orphaned cell,
+        // and both rows self-center regardless of how many buttons are in them.
+        private static readonly Vector2 PrimaryActionButtonSize = new Vector2(420, 100);
+
+        // Slightly smaller than Primary (still well above the old 280x76) since
+        // this row can hold more buttons as TopicData.json grows; sized to
+        // still fit 4-5 of them in one centered row at the canvas's reference
+        // width (1920) with comfortable spacing before ever needing to wrap.
+        private static readonly Vector2 SecondaryActionButtonSize = new Vector2(340, 88);
 
         // Bonus-topic Main Menu button text, keyed by TopicData.json's
         // topic.id - kept separate from topic.displayName (the longer title
@@ -169,10 +208,11 @@ namespace RocketTimeline.EditorTools
             RocketItem[] rocketData = LoadRocketDataForEditor();
             if (rocketData == null) return;
             TopicItem[] topicData = LoadTopicDataForEditor();
+            TelescopeItem[] telescopeData = LoadTelescopeDataForEditor();
 
             EnsureFolderExists(ScenesFolder);
 
-            BuildMainMenuSceneInternal(rocketData, topicData);
+            BuildMainMenuSceneInternal(rocketData, topicData, telescopeData);
             BuildGameSceneInternal(rocketData);
 
             EditorBuildSettings.scenes = new[]
@@ -209,8 +249,9 @@ namespace RocketTimeline.EditorTools
             RocketItem[] rocketData = LoadRocketDataForEditor();
             if (rocketData == null) return;
             TopicItem[] topicData = LoadTopicDataForEditor();
+            TelescopeItem[] telescopeData = LoadTelescopeDataForEditor();
             EnsureFolderExists(ScenesFolder);
-            BuildMainMenuSceneInternal(rocketData, topicData);
+            BuildMainMenuSceneInternal(rocketData, topicData, telescopeData);
         }
 
         // ================================================================================
@@ -223,9 +264,11 @@ namespace RocketTimeline.EditorTools
 
             CreateEventSystem();
             CreateCamera();
+            BuildAmbientMusic();
             RectTransform canvasRoot = CreateCanvas();
 
             CreateBackground(canvasRoot);
+            BuildScrollingStarfield(canvasRoot);
 
             RectTransform title = CreateText("Title", canvasRoot, "Rocket Evolution Timeline", 46, TextColor, TextAnchor.UpperLeft, FontStyle.Bold);
             Anchor(title, new Vector2(0, 1), new Vector2(1, 1), new Vector2(0.5f, 1), new Vector2(0, -20), new Vector2(-80, 55));
@@ -346,8 +389,18 @@ namespace RocketTimeline.EditorTools
             Button mainMenuButton = BuildStyledButton(controlsBar, "MainMenuButton", "Main Menu", ButtonSlate, 200, 88);
 
             // ---- Result panel -----------------------------------------------------------
+            // v24 (client: the result card "appears too lower... overlaps the
+            // blue line underneath it"): that blue line is PoolArea's own
+            // horizontal scrollbar handle, built by BuildScrollbar(poolArea,
+            // ...) just above - it sits inside PoolArea at local y 0-6, i.e.
+            // absolute Y [150,156] (PoolArea's own bottom anchor is 150). The
+            // old anchoredPosition of 130 put ResultPanel's bottom edge
+            // BELOW that (130 < 150), so the whole scrollbar band sat inside
+            // the panel's footprint, showing through at the card's bottom
+            // edge. Moved up by 46 so the panel's new bottom (176) clears the
+            // scrollbar's top (156) with a clean 20-unit gap instead.
             RectTransform resultPanel = BuildNineSlicePanel("ResultPanel", canvasRoot, "ui_panel", PanelTint, new Vector2(1100, 300));
-            Anchor(resultPanel, new Vector2(0.5f, 0f), new Vector2(0.5f, 0f), new Vector2(0.5f, 0f), new Vector2(0, 130), new Vector2(1100, 300));
+            Anchor(resultPanel, new Vector2(0.5f, 0f), new Vector2(0.5f, 0f), new Vector2(0.5f, 0f), new Vector2(0, 176), new Vector2(1100, 300));
             VerticalLayoutGroup resultLayout = resultPanel.gameObject.AddComponent<VerticalLayoutGroup>();
             resultLayout.spacing = 6;
             resultLayout.padding = new RectOffset(30, 30, 24, 24);
@@ -427,8 +480,17 @@ namespace RocketTimeline.EditorTools
             outlineImage.enabled = false;
             Anchor(outline, Vector2.zero, Vector2.one, new Vector2(0.5f, 0.5f), Vector2.zero, new Vector2(18, 18));
 
+            // v24 (client: the year label "is too close to the border... the
+            // red/green glow area" touches it): nudged down 6 units (-8 ->
+            // -14) for clearance from Outline above, which extends 9 units
+            // beyond the box on every side (including up) and then renders
+            // its own stroke inward from there. Deliberately a small nudge,
+            // not a bigger one - SlotAnchor (the placed rocket, below) starts
+            // only ~5 units under where this label already ends, so there
+            // isn't much spare room here before the label would start
+            // crowding the rocket instead of the border.
             RectTransform labelRect = CreateText("Label", box, label, 22, TextColor, TextAnchor.MiddleCenter, FontStyle.Bold);
-            Anchor(labelRect, new Vector2(0, 1), new Vector2(1, 1), new Vector2(0.5f, 1), new Vector2(0, -8), new Vector2(-16, 34));
+            Anchor(labelRect, new Vector2(0, 1), new Vector2(1, 1), new Vector2(0.5f, 1), new Vector2(0, -14), new Vector2(-16, 34));
 
             // Vertically centered in the space *below* the label (box height
             // grew in this pass specifically to give this room), rather than a
@@ -911,18 +973,318 @@ namespace RocketTimeline.EditorTools
             return (row, headingText, bodyText);
         }
 
+        /// <summary>
+        /// Full-screen Telescopes overlay - one telescope per page (Hubble,
+        /// JWST, VLT, VLA radio telescope to start), Prev/Next paging between
+        /// them like BuildTriviaReviewPanel's rocket encyclopedia. Each page
+        /// shows TWO images side by side - an actual photo of the telescope
+        /// (left) and a real astrophotography image stylized as a circular
+        /// "eyepiece" view of what it reveals (right), each with its own
+        /// small credit line underneath (several of these images are CC
+        /// BY 4.0 from NRAO/ESO and require visible attribution) - followed
+        /// by a scrolling fact block: what kind of telescope it is, why its
+        /// view image actually looks the way it does (the educational core
+        /// the client specifically asked for - including, for every entry so
+        /// far, the honest point that nobody ever looks through any of these
+        /// with their own eye), and a short trivia list.
+        /// </summary>
+        private static TelescopePagerUI BuildTelescopePanel(RectTransform canvasRoot, TelescopeItem[] telescopeData)
+        {
+            RectTransform root = CreateUIObject("TelescopePanel", canvasRoot);
+            Anchor(root, Vector2.zero, Vector2.one, new Vector2(0.5f, 0.5f), Vector2.zero, Vector2.zero);
+
+            RectTransform dim = CreateStretchPanel("DimBackground", root, new Color(0, 0, 0, 0.78f));
+            dim.GetComponent<Image>().raycastTarget = true;
+
+            // Bigger card than Trivia/Topic panels (1700x1040 vs 1600x900 /
+            // 1200x820) - this is the only panel carrying a hero photo, an
+            // interactive eyepiece button, AND a three-part fact block at once.
+            RectTransform card = BuildNineSlicePanel("Card", root, "ui_panel", PanelTint, new Vector2(1700, 1040));
+            Anchor(card, new Vector2(0.5f, 0.5f), new Vector2(0.5f, 0.5f), new Vector2(0.5f, 0.5f), Vector2.zero, new Vector2(1700, 1040));
+
+            // ---- Header: telescope name + era/location, Close top-right -------------------
+            RectTransform headerTitle = CreateText("HeaderTitle", card, "Telescope", 36, TextColor, TextAnchor.MiddleLeft, FontStyle.Bold);
+            Anchor(headerTitle, new Vector2(0, 1), new Vector2(1, 1), new Vector2(0.5f, 1), new Vector2(40, -42), new Vector2(-300, 48));
+
+            RectTransform headerEra = CreateText("HeaderEra", card, "", 20, MutedTextColor, TextAnchor.MiddleLeft);
+            Anchor(headerEra, new Vector2(0, 1), new Vector2(1, 1), new Vector2(0.5f, 1), new Vector2(40, -88), new Vector2(-300, 30));
+
+            Button closeButton = BuildStyledButton(card, "CloseButton", "Close", ButtonSlate, 150, 68);
+            Anchor(closeButton.GetComponent<RectTransform>(), new Vector2(1, 1), new Vector2(1, 1), new Vector2(1, 1), new Vector2(-28, -30), new Vector2(150, 68));
+
+            // ---- Content area: left = description + CTA button, right = hero photo --------
+            // Hand-verified safe budget for a 1040-tall card: 140 top inset clears the
+            // header, 170 bottom inset clears NavBar (which starts 150 up from the card's
+            // own bottom edge, same as every other panel) with a 20-unit margin to spare -
+            // same technique as BuildTriviaReviewPanel/BuildTopicFactsPanel's contentArea.
+            RectTransform contentArea = CreateUIObject("ContentArea", card);
+            Anchor(contentArea, Vector2.zero, Vector2.one, new Vector2(0.5f, 0.5f), new Vector2(0, 15), new Vector2(-80, -310));
+            // contentArea works out to 1620 wide x 730 tall (card width 1700 minus the
+            // 80 horizontal inset above) - the two columns below split that exactly in
+            // half (client: "50% of area on left is Telescope, 50% is description"),
+            // with a 30-unit gap between them.
+            const float ContentWidth = 1620f;
+            const float ColumnGap = 30f;
+            const float ColumnWidth = (ContentWidth - ColumnGap) / 2f;
+
+            // v3 (client: "the telescope image is in more vertical shape... a lot of
+            // whitespace around the image" - v2's hero photo sat in a 1620-wide x
+            // 306-tall band, so a tall/portrait source image like VLT or VLA only
+            // filled a narrow sliver of that width with huge empty margins left and
+            // right). Moved the hero photo into its own right-hand column at the
+            // CARD'S FULL CONTENT HEIGHT (730, more than double the old 306), so its
+            // frame is far closer to the images' own portrait-ish proportions and
+            // preserveAspect no longer has to shrink them down to a thin column.
+            RectTransform rightColumn = CreateUIObject("ImageColumn", contentArea);
+            Anchor(rightColumn, new Vector2(1, 0), new Vector2(1, 1), new Vector2(1, 0.5f), Vector2.zero, new Vector2(ColumnWidth, 0));
+            (Image hardwareImage, Text hardwareCredit) = BuildTelescopeHeroImage(rightColumn, 730f);
+
+            // Left column: the scrolling fact block on top, the eyepiece CTA button
+            // pinned under it (client: "put the Look through Eye piece button under
+            // the text area") - both now get a full 730-tall, half-card-wide column
+            // instead of previously sharing a single 218-tall sliver below the photo.
+            RectTransform leftColumn = CreateUIObject("TextColumn", contentArea);
+            Anchor(leftColumn, Vector2.zero, new Vector2(0, 1), new Vector2(0, 0.5f), Vector2.zero, new Vector2(ColumnWidth, 0));
+
+            // A wide, clearly interactive button - showing a small live preview of
+            // the view image plus a label - replacing the old always-visible half-
+            // width "Through the Eyepiece" column. Clicking it opens a dedicated
+            // full-card reveal overlay (built further below) where the same view
+            // image is shown much bigger - the client's own suggested fallback
+            // ("an interactive button... which shows the lens view") when fitting
+            // both images AND the full description on one page felt cramped.
+            RectTransform ctaRow = CreateUIObject("EyepieceCtaRow", leftColumn);
+            Anchor(ctaRow, new Vector2(0, 0), new Vector2(1, 0), new Vector2(0.5f, 0), Vector2.zero, new Vector2(0, 100));
+            (Button ctaButton, Image viewPreviewImage) = BuildEyepiecePreviewButton(ctaRow);
+
+            // Scrolling fact block, same ScrollArea + VerticalLayoutGroup + ContentSizeFitter
+            // technique as BuildTriviaReviewPanel's DetailArea - sits above EyepieceCtaRow
+            // (100) with a 20-unit gap, filling the rest of the 730-tall left column (610).
+            RectTransform scrollHost = CreateUIObject("ScrollHost", leftColumn);
+            Anchor(scrollHost, new Vector2(0, 1), new Vector2(1, 1), new Vector2(0.5f, 1), Vector2.zero, new Vector2(0, 610));
+
+            BuildScrollArea("FactsScroll", scrollHost, horizontal: false, vertical: true, out RectTransform factsContent, out ScrollRect factsScrollRect);
+            VerticalLayoutGroup factsLayout = factsContent.gameObject.AddComponent<VerticalLayoutGroup>();
+            factsLayout.spacing = 6;
+            factsLayout.padding = new RectOffset(0, 16, 0, 12); // right clears the scrollbar; bottom gives the last line room before it clips
+            factsLayout.childAlignment = TextAnchor.UpperLeft;
+            factsLayout.childForceExpandWidth = true;
+            factsLayout.childForceExpandHeight = false;
+            factsLayout.childControlWidth = true;
+            factsLayout.childControlHeight = true;
+            ContentSizeFitter factsFitter = factsContent.gameObject.AddComponent<ContentSizeFitter>();
+            factsFitter.verticalFit = ContentSizeFitter.FitMode.PreferredSize;
+            BuildScrollbar(scrollHost, factsScrollRect, horizontal: false);
+
+            AddParagraph(factsContent, "WhatItIsLabel", 26, TextColor, FontStyle.Bold, -1, TextAnchor.UpperLeft).text = "What It Is:";
+            Text opticalPrincipleValue = AddParagraph(factsContent, "WhatItIsValue", 23, MutedTextColor, FontStyle.Normal, -1, TextAnchor.UpperLeft);
+
+            AddVerticalSpacer(factsContent, 22);
+            AddParagraph(factsContent, "WhyLabel", 26, TextColor, FontStyle.Bold, -1, TextAnchor.UpperLeft).text = "Why It Looks This Way:";
+            Text whyItLooksValue = AddParagraph(factsContent, "WhyValue", 23, MutedTextColor, FontStyle.Normal, -1, TextAnchor.UpperLeft);
+
+            AddVerticalSpacer(factsContent, 22);
+            AddParagraph(factsContent, "TriviaLabel", 26, TextColor, FontStyle.Bold, -1, TextAnchor.UpperLeft).text = "Trivia:";
+            Text triviaValue = AddParagraph(factsContent, "TriviaValue", 23, MutedTextColor, FontStyle.Normal, -1, TextAnchor.UpperLeft);
+
+            // ---- Eyepiece reveal overlay: opened by ctaButton above, a dedicated big
+            // moment for the view image instead of sharing a half-width column with
+            // the hardware photo and the full fact block on the same page. Built as a
+            // later sibling of Card (not a child of it) so it draws on top of
+            // everything else in this panel, including NavBar, and its full-screen
+            // dim background blocks Prev/Next/Close while it's open.
+            RectTransform overlayRoot = CreateUIObject("EyepieceOverlay", root);
+            Anchor(overlayRoot, Vector2.zero, Vector2.one, new Vector2(0.5f, 0.5f), Vector2.zero, Vector2.zero);
+
+            RectTransform overlayDim = CreateStretchPanel("OverlayDim", overlayRoot, new Color(0, 0, 0, 0.90f));
+            overlayDim.GetComponent<Image>().raycastTarget = true;
+
+            RectTransform overlayName = CreateText("OverlayName", overlayRoot, "", 34, TextColor, TextAnchor.MiddleCenter, FontStyle.Bold);
+            Anchor(overlayName, new Vector2(0.5f, 1), new Vector2(0.5f, 1), new Vector2(0.5f, 1), new Vector2(0, -56), new Vector2(1200, 48));
+
+            RectTransform largeImageRect = CreateUIObject("LargeViewImage", overlayRoot);
+            Anchor(largeImageRect, new Vector2(0.5f, 0.5f), new Vector2(0.5f, 0.5f), new Vector2(0.5f, 0.5f), new Vector2(0, 16), new Vector2(760, 760));
+            Image viewImageLarge = largeImageRect.gameObject.AddComponent<Image>();
+            viewImageLarge.preserveAspect = true;
+            viewImageLarge.raycastTarget = false;
+
+            RectTransform overlayCredit = CreateText("OverlayCredit", overlayRoot, "", 18, MutedTextColor, TextAnchor.MiddleCenter, FontStyle.Italic);
+            Anchor(overlayCredit, new Vector2(0.5f, 0), new Vector2(0.5f, 0), new Vector2(0.5f, 0), new Vector2(0, 108), new Vector2(1200, 30));
+
+            Button overlayCloseButton = BuildStyledButton(overlayRoot, "OverlayCloseButton", "Close", ButtonSlate, 160, 68);
+            Anchor(overlayCloseButton.GetComponent<RectTransform>(), new Vector2(0.5f, 0), new Vector2(0.5f, 0), new Vector2(0.5f, 0), new Vector2(0, 30), new Vector2(160, 68));
+
+            overlayRoot.gameObject.SetActive(false);
+
+            // ---- Bottom nav bar: Prev / page indicator / Next ------------------------------
+            RectTransform navBar = CreateUIObject("NavBar", card);
+            Anchor(navBar, new Vector2(0, 0), new Vector2(1, 0), new Vector2(0.5f, 0), new Vector2(0, 54), new Vector2(-48, 96));
+
+            Button prevButton = BuildStyledButton(navBar, "PrevButton", "< Prev", ButtonSlate, 200, 76);
+            Anchor(prevButton.GetComponent<RectTransform>(), new Vector2(0, 0.5f), new Vector2(0, 0.5f), new Vector2(0, 0.5f), new Vector2(10, 0), new Vector2(200, 76));
+
+            Button nextButton = BuildStyledButton(navBar, "NextButton", "Next >", ButtonBlue, 200, 76);
+            Anchor(nextButton.GetComponent<RectTransform>(), new Vector2(1, 0.5f), new Vector2(1, 0.5f), new Vector2(1, 0.5f), new Vector2(-10, 0), new Vector2(200, 76));
+
+            // Placeholder only - TelescopePagerUI.Render() overwrites this with the real
+            // "{page} / {telescopes.Length}" the moment the panel is shown.
+            Text pageIndicator = CreateText("PageIndicator", navBar, $"1 / {Mathf.Max(telescopeData.Length, 1)}", 22, MutedTextColor, TextAnchor.MiddleCenter).GetComponent<Text>();
+            Anchor(pageIndicator.GetComponent<RectTransform>(), new Vector2(0.5f, 0.5f), new Vector2(0.5f, 0.5f), new Vector2(0.5f, 0.5f), Vector2.zero, new Vector2(220, 50));
+
+            // ---- Wire the pager, in TelescopeData.json order ----------------------------
+            var hardwareSprites = new List<Sprite>();
+            var viewSprites = new List<Sprite>();
+            foreach (TelescopeItem data in telescopeData)
+            {
+                Sprite hw = AssetDatabase.LoadAssetAtPath<Sprite>($"{TelescopeHardwareSpritesFolder}/{data.hardwareSpriteName}.jpg");
+                if (hw == null) Debug.LogWarning($"[RocketTimelineSceneBuilder] Telescope hardware sprite not found for '{data.id}' at {TelescopeHardwareSpritesFolder}/{data.hardwareSpriteName}.jpg");
+                hardwareSprites.Add(hw);
+
+                Sprite view = AssetDatabase.LoadAssetAtPath<Sprite>($"{TelescopeViewSpritesFolder}/{data.viewImageSpriteName}.png");
+                if (view == null) Debug.LogWarning($"[RocketTimelineSceneBuilder] Telescope view sprite not found for '{data.id}' at {TelescopeViewSpritesFolder}/{data.viewImageSpriteName}.png");
+                viewSprites.Add(view);
+            }
+
+            TelescopePagerUI pager = root.gameObject.AddComponent<TelescopePagerUI>();
+            pager.root = root.gameObject;
+            pager.nameText = headerTitle.GetComponent<Text>();
+            pager.eraText = headerEra.GetComponent<Text>();
+            pager.hardwareImage = hardwareImage;
+            pager.hardwareCreditText = hardwareCredit;
+            pager.viewImage = viewPreviewImage;
+            pager.eyepieceOverlayRoot = overlayRoot.gameObject;
+            pager.viewImageLarge = viewImageLarge;
+            pager.eyepieceOverlayNameText = overlayName.GetComponent<Text>();
+            pager.eyepieceOverlayCreditText = overlayCredit.GetComponent<Text>();
+            pager.opticalPrincipleValueText = opticalPrincipleValue;
+            pager.whyItLooksValueText = whyItLooksValue;
+            pager.triviaValueText = triviaValue;
+            pager.contentScrollRect = factsScrollRect;
+            pager.pageIndicatorText = pageIndicator;
+            pager.telescopes = telescopeData;
+            pager.hardwareSprites = hardwareSprites.ToArray();
+            pager.viewSprites = viewSprites.ToArray();
+
+            UnityEventTools.AddVoidPersistentListener(closeButton.onClick, pager.Close);
+            UnityEventTools.AddVoidPersistentListener(prevButton.onClick, pager.PrevPage);
+            UnityEventTools.AddVoidPersistentListener(nextButton.onClick, pager.NextPage);
+            UnityEventTools.AddVoidPersistentListener(ctaButton.onClick, pager.ShowEyepieceOverlay);
+            UnityEventTools.AddVoidPersistentListener(overlayCloseButton.onClick, pager.CloseEyepieceOverlay);
+
+            root.gameObject.SetActive(false);
+            return pager;
+        }
+
+        /// <summary>
+        /// BuildTelescopePanel's hero hardware photo - a bold "The Telescope"
+        /// label, a framed image below it (preserveAspect, so it doesn't matter
+        /// that the hardware photos don't all share one aspect ratio), and a
+        /// small muted credit line under that.
+        ///
+        /// v3 (client: "the telescope image is in more vertical shape... a lot
+        /// of whitespace around the image" - a tall source photo like VLT/VLA
+        /// barely filled a short, very wide frame): <paramref name="height"/>
+        /// is now the caller's to set, rather than this method always
+        /// hardcoding a short fixed band, so BuildTelescopePanel can give it
+        /// the full content-area height in its own right-hand column instead -
+        /// the frame ends up far closer to a portrait photo's own proportions,
+        /// so preserveAspect no longer has to shrink the image down to a thin
+        /// sliver to fit.
+        /// </summary>
+        private static (Image image, Text credit) BuildTelescopeHeroImage(Transform parent, float height)
+        {
+            const float LabelHeight = 28f;
+            const float Gap = 6f;
+            const float CreditHeight = 34f;
+            float frameHeight = height - LabelHeight - Gap - CreditHeight - Gap;
+
+            RectTransform labelRect = CreateText("Label", parent, "The Telescope", 22, TextColor, TextAnchor.MiddleCenter, FontStyle.Bold);
+            Anchor(labelRect, new Vector2(0, 1), new Vector2(1, 1), new Vector2(0.5f, 1), Vector2.zero, new Vector2(0, LabelHeight));
+
+            RectTransform frame = BuildNineSlicePanel("Frame", parent, "ui_panel", CardTint, new Vector2(10, 10));
+            Anchor(frame, new Vector2(0, 1), new Vector2(1, 1), new Vector2(0.5f, 1), new Vector2(0, -(LabelHeight + Gap)), new Vector2(0, frameHeight));
+
+            RectTransform imageRect = CreateUIObject("Image", frame);
+            Anchor(imageRect, Vector2.zero, Vector2.one, new Vector2(0.5f, 0.5f), Vector2.zero, new Vector2(-40, -40));
+            Image image = imageRect.gameObject.AddComponent<Image>();
+            image.preserveAspect = true;
+            image.raycastTarget = false;
+
+            RectTransform creditRect = CreateText("Credit", parent, "", 16, MutedTextColor, TextAnchor.UpperCenter, FontStyle.Italic);
+            Anchor(creditRect, new Vector2(0, 1), new Vector2(1, 1), new Vector2(0.5f, 1), new Vector2(0, -(LabelHeight + Gap + frameHeight + Gap)), new Vector2(0, CreditHeight));
+            Text creditText = creditRect.GetComponent<Text>();
+            creditText.horizontalOverflow = HorizontalWrapMode.Wrap;
+            creditText.verticalOverflow = VerticalWrapMode.Truncate;
+
+            return (image, creditText);
+        }
+
+        /// <summary>
+        /// BuildTelescopePanel's "Look Through the Eyepiece" call-to-action - a
+        /// wide ghost button (gold accent, to stand out from the slate Prev/Next
+        /// and Close buttons as the one clearly special action on this page)
+        /// holding a small circular live preview of the current telescope's view
+        /// image on the left and a bold label + arrow on the right. Clicking it
+        /// opens BuildTelescopePanel's EyepieceOverlay via TelescopePagerUI.
+        /// ShowEyepieceOverlay, where the SAME view image (see Render() in
+        /// TelescopePagerUI) is shown much bigger.
+        /// </summary>
+        private static (Button button, Image previewImage) BuildEyepiecePreviewButton(Transform parent)
+        {
+            RectTransform buttonRect = BuildNineSlicePanel("EyepieceButton", parent, "ui_button_ghost", ButtonGold, new Vector2(10, 10));
+            Anchor(buttonRect, Vector2.zero, Vector2.one, new Vector2(0.5f, 0.5f), Vector2.zero, Vector2.zero);
+
+            Image bgImage = buttonRect.GetComponent<Image>();
+            Button button = buttonRect.gameObject.AddComponent<Button>();
+            button.targetGraphic = bgImage;
+            // See BuildStyledButton's v15 comment: None must be set before
+            // `colors` is assigned below, not after.
+            button.transition = Selectable.Transition.None;
+            ColorBlock colors = button.colors;
+            colors.normalColor = Color.white;
+            colors.highlightedColor = new Color(1.15f, 1.15f, 1.15f, 1f);
+            colors.pressedColor = new Color(0.82f, 0.82f, 0.82f, 1f);
+            colors.selectedColor = Color.white;
+            colors.disabledColor = new Color(1f, 1f, 1f, 0.45f);
+            button.colors = colors;
+            buttonRect.gameObject.AddComponent<ButtonHoverPunch>();
+
+            RectTransform thumbFrame = BuildNineSlicePanel("ThumbFrame", buttonRect, "ui_panel", CardTint, new Vector2(84, 84));
+            Anchor(thumbFrame, new Vector2(0, 0.5f), new Vector2(0, 0.5f), new Vector2(0, 0.5f), new Vector2(18, 0), new Vector2(84, 84));
+
+            RectTransform thumbImageRect = CreateUIObject("Thumb", thumbFrame);
+            Anchor(thumbImageRect, Vector2.zero, Vector2.one, new Vector2(0.5f, 0.5f), Vector2.zero, new Vector2(-10, -10));
+            Image previewImage = thumbImageRect.gameObject.AddComponent<Image>();
+            previewImage.preserveAspect = true;
+            previewImage.raycastTarget = false;
+
+            // v3: font size pulled back a little (27 -> 24) now that this button
+            // sits in a half-width (795) left column instead of the full
+            // 1620-wide content area, so the label has noticeably less box width
+            // to work with even though the text itself didn't get any shorter.
+            RectTransform labelRect = CreateText("Label", buttonRect, "Look Through the Eyepiece", 24, ButtonGold, TextAnchor.MiddleCenter, FontStyle.Bold);
+            Anchor(labelRect, new Vector2(0, 0), new Vector2(1, 1), new Vector2(0.5f, 0.5f), new Vector2(40, 0), new Vector2(-220, 0));
+
+            RectTransform arrowRect = CreateText("Arrow", buttonRect, ">", 34, ButtonGold, TextAnchor.MiddleCenter, FontStyle.Bold);
+            Anchor(arrowRect, new Vector2(1, 0.5f), new Vector2(1, 0.5f), new Vector2(1, 0.5f), new Vector2(-30, 0), new Vector2(50, 50));
+
+            return (button, previewImage);
+        }
+
         // ================================================================================
         // MAIN MENU SCENE
         // ================================================================================
 
-        private static void BuildMainMenuSceneInternal(RocketItem[] rocketData, TopicItem[] topicData)
+        private static void BuildMainMenuSceneInternal(RocketItem[] rocketData, TopicItem[] topicData, TelescopeItem[] telescopeData)
         {
             Scene scene = EditorSceneManager.NewScene(NewSceneSetup.EmptyScene, NewSceneMode.Single);
 
             CreateEventSystem();
             CreateCamera();
+            BuildAmbientMusic();
             RectTransform canvasRoot = CreateCanvas();
             CreateBackground(canvasRoot);
+            BuildScrollingStarfield(canvasRoot);
 
             // v15: client feedback on v14 was that the title/subtitle/Play
             // button sat too low, leaving a big dead zone above the title
@@ -960,48 +1322,73 @@ namespace RocketTimeline.EditorTools
             // than one row of four.
             Button playButton = BuildStyledButton(canvasRoot, "PlayButton", "Play", ButtonCosmicPurple, 360, 120, solid: true);
             RectTransform playRect = playButton.GetComponent<RectTransform>();
-            // v15: +120 to match TitleBlock's move above. Gap from
-            // TitleBlock's bottom (626.8) to here (404): 102.8, basically
-            // unchanged from v14's 104 since both moved together.
-            Anchor(playRect, new Vector2(0.5f, 0f), new Vector2(0.5f, 0f), new Vector2(0.5f, 0f), new Vector2(0, 404), new Vector2(360, 120));
+            // v24 (client: the gap above Play - between it and the subtitle -
+            // read as noticeably bigger than the gap below it to PlayCaption,
+            // 102.8 vs 38). Moved Play+PlayCaption UP together as a unit by
+            // 65, so the gap above shrinks to roughly match (626.8 - 589 =
+            // 37.8) while the Play-to-caption gap below stays exactly the
+            // same 38 it was (both moved by the same amount). ActionRow below
+            // wasn't touched - it's anchored independently of this hero
+            // block, so it's unaffected either way.
+            Anchor(playRect, new Vector2(0.5f, 0f), new Vector2(0.5f, 0f), new Vector2(0.5f, 0f), new Vector2(0, 469), new Vector2(360, 120));
             // Button text a little larger for the primary call-to-action.
             Text playLabel = playButton.GetComponentInChildren<Text>();
             if (playLabel != null) playLabel.fontSize = 36;
             UnityEventTools.AddVoidPersistentListener(playButton.onClick, sceneLoader.LoadGame);
 
-            // v15: +120 to match TitleBlock/Play above - Play's bottom (404)
-            // to here (366): 38, same gap as v14.
-            // v15.1: ActionRow is now 2 rows tall (its top moved 142 -> 234,
-            // see below), so the gap below the caption shrank from 160 back
-            // down to 68 - still open breathing room, not packed.
+            // v24: +65 to match Play's move above - see that Anchor call's
+            // comment. Gap to Play's new bottom (469) stays 38, unchanged.
             RectTransform playCaption = CreateText("PlayCaption", canvasRoot,
                 "Play the drag & drop timeline challenge and see how much you\nremember of the evolutionary timeline of rockets.",
                 22, MutedTextColor, TextAnchor.MiddleCenter);
-            Anchor(playCaption, new Vector2(0.5f, 0f), new Vector2(0.5f, 0f), new Vector2(0.5f, 0f), new Vector2(0, 302), new Vector2(1000, 64));
+            Anchor(playCaption, new Vector2(0.5f, 0f), new Vector2(0.5f, 0f), new Vector2(0.5f, 0f), new Vector2(0, 367), new Vector2(1000, 64));
 
-            // ---- ActionRow: Rocket Trivia + one "About..." button per TopicData.json
-            // entry, all built at one fixed size (ActionButtonSize) so every button -
-            // however long its label - lines up identically.
-            // v15.1: laid out as a 2-column grid (client asked for 2x2) instead of a
-            // single row of four, and the footer text below it was removed entirely
-            // (client request) - ActionRow's bottom anchor (66) is unchanged, so with
-            // the footer gone that's now simply the bottom margin to the canvas edge.
-            // Still data-driven: a 5th topic added later wraps to a 3rd row (2 cols x
-            // Ceil(total/2) rows) rather than needing a code change here.
-            int actionButtonCount = topicData.Length + 1;
-            int actionColumns = 2;
-            int actionRows = Mathf.CeilToInt(actionButtonCount / (float)actionColumns);
-            float actionRowWidth = actionColumns * ActionButtonSize.x + (actionColumns - 1) * 16f;
-            float actionRowHeight = actionRows * ActionButtonSize.y + (actionRows - 1) * 16f;
-            RectTransform actionRow = CreateUIObject("ActionRow", canvasRoot);
-            Anchor(actionRow, new Vector2(0.5f, 0f), new Vector2(0.5f, 0f), new Vector2(0.5f, 0f), new Vector2(0, 66), new Vector2(actionRowWidth, actionRowHeight));
-            GridLayoutGroup actionLayout = actionRow.gameObject.AddComponent<GridLayoutGroup>();
-            actionLayout.cellSize = ActionButtonSize;
-            actionLayout.spacing = new Vector2(16, 16);
-            actionLayout.childAlignment = TextAnchor.MiddleCenter;
-            actionLayout.startAxis = GridLayoutGroup.Axis.Horizontal;
-            actionLayout.constraint = GridLayoutGroup.Constraint.FixedColumnCount;
-            actionLayout.constraintCount = actionColumns;
+            // ---- PrimaryActionRow + SecondaryActionRow: v16 replacement for the old
+            // single GridLayoutGroup ActionRow (client: "the sub topic buttons...
+            // need to be more bigger and it is out of order... put them in
+            // symmetric manner"). The old grid grew to 3 uneven rows once
+            // Telescopes made it a 5th cell, overlapping PlayCaption above it and
+            // leaving the 5th button alone on its own row.
+            //
+            // Fix: two independently-centered HorizontalLayoutGroup rows instead
+            // of one grid. PrimaryActionRow always holds exactly the two
+            // "encyclopedia" buttons (Rocket Trivia, Telescopes) at the larger
+            // PrimaryActionButtonSize; SecondaryActionRow holds one button per
+            // TopicData.json entry at SecondaryActionButtonSize. Because each row
+            // is its own HorizontalLayoutGroup with childAlignment = MiddleCenter
+            // and childControlWidth/Height + childForceExpandWidth/Height all
+            // false (so the layout only ever centers the buttons' own fixed
+            // sizes, never stretches or repositions them individually), both rows
+            // self-center on their own content width no matter how many buttons
+            // end up in them - a topic added or removed later just re-centers the
+            // row, it never produces an orphaned cell or a 3rd row the way the
+            // grid did. Height is always exactly 2 rows, so this can never grow
+            // tall enough to collide with PlayCaption again.
+            float primaryRowWidth = 2 * PrimaryActionButtonSize.x + 24f;
+            RectTransform primaryActionRow = CreateUIObject("PrimaryActionRow", canvasRoot);
+            Anchor(primaryActionRow, new Vector2(0.5f, 0f), new Vector2(0.5f, 0f), new Vector2(0.5f, 0f), new Vector2(0, 174), new Vector2(primaryRowWidth, PrimaryActionButtonSize.y));
+            HorizontalLayoutGroup primaryLayout = primaryActionRow.gameObject.AddComponent<HorizontalLayoutGroup>();
+            primaryLayout.spacing = 24f;
+            primaryLayout.childAlignment = TextAnchor.MiddleCenter;
+            primaryLayout.childControlWidth = false;
+            primaryLayout.childControlHeight = false;
+            primaryLayout.childForceExpandWidth = false;
+            primaryLayout.childForceExpandHeight = false;
+
+            // SecondaryActionRow's width is data-driven (one cell per
+            // TopicData.json entry, same spacing as Primary) so it always stays
+            // centered as topics are added/removed - mirrors the old grid's own
+            // "still data-driven" intent, just without the grid's row-wrapping.
+            float secondaryRowWidth = topicData.Length * SecondaryActionButtonSize.x + Mathf.Max(0, topicData.Length - 1) * 24f;
+            RectTransform secondaryActionRow = CreateUIObject("SecondaryActionRow", canvasRoot);
+            Anchor(secondaryActionRow, new Vector2(0.5f, 0f), new Vector2(0.5f, 0f), new Vector2(0.5f, 0f), new Vector2(0, 66), new Vector2(secondaryRowWidth, SecondaryActionButtonSize.y));
+            HorizontalLayoutGroup secondaryLayout = secondaryActionRow.gameObject.AddComponent<HorizontalLayoutGroup>();
+            secondaryLayout.spacing = 24f;
+            secondaryLayout.childAlignment = TextAnchor.MiddleCenter;
+            secondaryLayout.childControlWidth = false;
+            secondaryLayout.childControlHeight = false;
+            secondaryLayout.childForceExpandWidth = false;
+            secondaryLayout.childForceExpandHeight = false;
 
             // v15: "Browse Trivia" -> "Rocket Trivia", and rest color pulled
             // back to ButtonSlate so this button looks identical to the
@@ -1009,13 +1396,25 @@ namespace RocketTimeline.EditorTools
             // differentiates itself on hover/press (see hoverColor below),
             // not by one button permanently wearing a different color than
             // its neighbors.
-            Button rocketTriviaButton = BuildStyledButton(actionRow, "RocketTriviaButton", "Rocket Trivia", ButtonSlate, ActionButtonSize.x, ActionButtonSize.y, hoverColor: ButtonBlue);
+            Button rocketTriviaButton = BuildStyledButton(primaryActionRow, "RocketTriviaButton", "Rocket Trivia", ButtonSlate, PrimaryActionButtonSize.x, PrimaryActionButtonSize.y, hoverColor: ButtonBlue);
             Text rocketTriviaLabel = rocketTriviaButton.GetComponentInChildren<Text>();
-            if (rocketTriviaLabel != null) rocketTriviaLabel.fontSize = 19;
+            if (rocketTriviaLabel != null) rocketTriviaLabel.fontSize = 24;
 
             // ---- Trivia review screen, reachable straight from the Main Menu too ----------
             TriviaReviewPagerUI triviaReviewPager = BuildTriviaReviewPanel(canvasRoot, rocketData);
             UnityEventTools.AddVoidPersistentListener(rocketTriviaButton.onClick, triviaReviewPager.Show);
+
+            // ---- Telescopes screen - its own section, separate from the rocket
+            // timeline/trivia, per client request ("I decided to separate it from
+            // the rocket section for more clarity"). Same PrimaryActionRow button
+            // styling as Rocket Trivia so the two primary encyclopedia buttons
+            // read as a pair.
+            Button telescopesButton = BuildStyledButton(primaryActionRow, "TelescopesButton", "Telescopes", ButtonSlate, PrimaryActionButtonSize.x, PrimaryActionButtonSize.y, hoverColor: ButtonBlue);
+            Text telescopesLabel = telescopesButton.GetComponentInChildren<Text>();
+            if (telescopesLabel != null) telescopesLabel.fontSize = 24;
+
+            TelescopePagerUI telescopePager = BuildTelescopePanel(canvasRoot, telescopeData);
+            UnityEventTools.AddVoidPersistentListener(telescopesButton.onClick, telescopePager.Show);
 
             // ---- One bonus-topic panel + one ActionRow button per TopicData.json entry ----
             foreach (TopicItem topic in topicData)
@@ -1027,16 +1426,17 @@ namespace RocketTimeline.EditorTools
                 // Satellites" / "About Rovers" / "About International Space
                 // Station". A topic id added later without an entry here
                 // just falls back to "About <displayName>" wrapped to fit
-                // the same fixed ActionButtonSize as every other button in
-                // the row, so nothing ever breaks the row's uniform sizing.
+                // the same fixed SecondaryActionButtonSize as every other
+                // button in the row, so nothing ever breaks the row's
+                // uniform sizing.
                 string label = BonusButtonLabels.TryGetValue(topic.id, out string mapped) ? mapped : $"About {topic.displayName}";
 
                 // v15: same ButtonBlue hover-accent as Rocket Trivia above, so
                 // every button in the row pops the same neon-cyan glow on
                 // hover/press and only differs while the pointer is on it.
-                Button topicButton = BuildStyledButton(actionRow, $"About_{topic.id}", label, ButtonSlate, ActionButtonSize.x, ActionButtonSize.y, hoverColor: ButtonBlue);
+                Button topicButton = BuildStyledButton(secondaryActionRow, $"About_{topic.id}", label, ButtonSlate, SecondaryActionButtonSize.x, SecondaryActionButtonSize.y, hoverColor: ButtonBlue);
                 Text topicLabel = topicButton.GetComponentInChildren<Text>();
-                if (topicLabel != null) topicLabel.fontSize = 19;
+                if (topicLabel != null) topicLabel.fontSize = 21;
 
                 TopicFactsPagerUI topicPager = BuildTopicFactsPanel(canvasRoot, topic);
                 UnityEventTools.AddVoidPersistentListener(topicButton.onClick, topicPager.Show);
@@ -1066,6 +1466,47 @@ namespace RocketTimeline.EditorTools
             cam.orthographic = true;
             // A camera just needs to exist for the Game view to render normally -
             // the UI itself draws via the Screen Space Overlay canvas regardless.
+        }
+
+        /// <summary>
+        /// Looping ambient background music (client: "an Ambient Interstellar
+        /// inspired sound... calm... that can make it match with astronomy
+        /// theme"). The AudioClip itself (Assets/_Project/Audio/Music/
+        /// ambient_space_theme.wav) is an original synthesized track - see the
+        /// v20 note in README.md for how it was made and why it loops with no
+        /// audible seam - not a copy of any existing copyrighted score, so
+        /// there's nothing to clear for your client.
+        ///
+        /// Baked into BOTH scenes (same as CreateCamera/CreateEventSystem
+        /// above), but AmbientMusicController.Awake() makes sure only ONE
+        /// instance survives: the first one DontDestroyOnLoad's itself and
+        /// keeps playing uninterrupted, and the copy baked into whichever
+        /// scene loads next destroys itself on arrival instead of starting a
+        /// second, overlapping playback. That's what keeps the music
+        /// "consistent" (the client's own word) across Main Menu <-> Game
+        /// scene changes, not just within one loop.
+        /// </summary>
+        private static void BuildAmbientMusic()
+        {
+            GameObject musicGo = new GameObject("AmbientMusic", typeof(AudioSource), typeof(AmbientMusicController));
+            AudioSource source = musicGo.GetComponent<AudioSource>();
+            AudioClip clip = AssetDatabase.LoadAssetAtPath<AudioClip>($"{MusicFolder}/ambient_space_theme.wav");
+            if (clip != null)
+            {
+                source.clip = clip;
+                source.loop = true;
+                source.playOnAwake = true;
+                // Background ambience, not a foreground element - quiet enough
+                // to sit under the UI/SFX without fighting for attention.
+                source.volume = 0.35f;
+                source.spatialBlend = 0f; // 2D - this isn't positioned in world space
+                source.priority = 200;    // lower priority than any future SFX (0 = highest, 256 = lowest)
+            }
+            else
+            {
+                Debug.LogWarning($"[RocketTimelineSceneBuilder] Ambient music clip not found at {MusicFolder}/ambient_space_theme.wav - this scene will be silent. Re-import the audio package and run Build Everything again.");
+            }
+            musicGo.GetComponent<AmbientMusicController>().audioSource = source;
         }
 
         private static RectTransform CreateCanvas()
@@ -1106,6 +1547,54 @@ namespace RocketTimeline.EditorTools
             {
                 bgImage.color = new Color(0.04f, 0.05f, 0.09f);
             }
+        }
+
+        /// <summary>
+        /// Layers a slowly-drifting star overlay on top of the static nebula
+        /// background built by CreateBackground() just above - called right
+        /// after it in both scene builders, so sibling order puts this
+        /// between the backdrop and everything else (buttons, panels, text
+        /// all still draw on top of it, same as before). See
+        /// ScrollingStarfieldLayer's own doc comment for the gapless 2-panel
+        /// scroll technique and why the panel height/tile size have to divide
+        /// evenly.
+        /// </summary>
+        private static void BuildScrollingStarfield(RectTransform canvasRoot)
+        {
+            Sprite starSprite = AssetDatabase.LoadAssetAtPath<Sprite>($"{BackgroundsFolder}/{ScrollStarTileName}.png");
+            if (starSprite == null)
+            {
+                Debug.LogWarning($"[RocketTimelineSceneBuilder] Scrolling star overlay not found at {BackgroundsFolder}/{ScrollStarTileName}.png - skipping (background will stay static).");
+                return;
+            }
+
+            RectTransform layerRoot = CreateUIObject("ScrollingStarfield", canvasRoot);
+            Anchor(layerRoot, Vector2.zero, Vector2.one, new Vector2(0.5f, 0.5f), Vector2.zero, Vector2.zero);
+
+            RectTransform panelA = BuildStarPanel(layerRoot, "StarPanelA", starSprite, 0f);
+            RectTransform panelB = BuildStarPanel(layerRoot, "StarPanelB", starSprite, ScrollStarPanelHeight);
+
+            ScrollingStarfieldLayer layer = layerRoot.gameObject.AddComponent<ScrollingStarfieldLayer>();
+            layer.panelA = panelA;
+            layer.panelB = panelB;
+            layer.panelHeight = ScrollStarPanelHeight;
+            layer.scrollSpeed = ScrollStarSpeed;
+        }
+
+        /// <summary>One full-width, ScrollStarPanelHeight-tall tiled copy of
+        /// the star sprite, top-pivot anchored so startY=0 means "flush with
+        /// the canvas top" and a positive startY stacks it that far above
+        /// that - see BuildScrollingStarfield, which places the second panel
+        /// exactly one panel-height above the first this way.</summary>
+        private static RectTransform BuildStarPanel(Transform parent, string name, Sprite sprite, float startY)
+        {
+            RectTransform panel = CreateUIObject(name, parent);
+            Anchor(panel, new Vector2(0, 1), new Vector2(1, 1), new Vector2(0.5f, 1), new Vector2(0, startY), new Vector2(0, ScrollStarPanelHeight));
+            Image image = panel.gameObject.AddComponent<Image>();
+            image.sprite = sprite;
+            image.type = Image.Type.Tiled;
+            image.raycastTarget = false;
+            return panel;
         }
 
         // ================================================================================
@@ -1149,6 +1638,25 @@ namespace RocketTimeline.EditorTools
             }
             TopicItemList list = JsonUtility.FromJson<TopicItemList>(json.text);
             return list?.topics ?? new TopicItem[0];
+        }
+
+        /// <summary>Loads the Telescopes section data the same way
+        /// LoadTopicDataForEditor above loads the bonus topics. Returns an
+        /// empty array (not null) if the file is missing, so a project built
+        /// before this feature still builds successfully with the Telescopes
+        /// Main Menu button simply left unwired rather than failing the whole
+        /// build.</summary>
+        private static TelescopeItem[] LoadTelescopeDataForEditor()
+        {
+            const string jsonPath = "Assets/_Project/Resources/TelescopeData.json";
+            TextAsset json = AssetDatabase.LoadAssetAtPath<TextAsset>(jsonPath);
+            if (json == null)
+            {
+                Debug.LogWarning($"[RocketTimelineSceneBuilder] Could not find {jsonPath} - skipping the Telescopes Main Menu button.");
+                return new TelescopeItem[0];
+            }
+            TelescopeItemList list = JsonUtility.FromJson<TelescopeItemList>(json.text);
+            return list?.telescopes ?? new TelescopeItem[0];
         }
 
         // ================================================================================

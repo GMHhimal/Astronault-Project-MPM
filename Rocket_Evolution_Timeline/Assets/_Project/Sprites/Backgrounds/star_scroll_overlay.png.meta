@@ -1,0 +1,4130 @@
+fileFormatVersion: 2
+guid: 81fdd3d8e990e6d4e8cce8e3abe6cab8
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -1878069724189762471
+    second: star_scroll_overlay_0
+  - first:
+      213: 4670120276401910657
+    second: star_scroll_overlay_1
+  - first:
+      213: 6929177474443991861
+    second: star_scroll_overlay_2
+  - first:
+      213: -4148091398666182897
+    second: star_scroll_overlay_3
+  - first:
+      213: -7531361721562206058
+    second: star_scroll_overlay_4
+  - first:
+      213: 5577399250403663800
+    second: star_scroll_overlay_5
+  - first:
+      213: 1073699463412585862
+    second: star_scroll_overlay_6
+  - first:
+      213: 6981849736780919973
+    second: star_scroll_overlay_7
+  - first:
+      213: 1237603885209069191
+    second: star_scroll_overlay_8
+  - first:
+      213: 1464930281752055390
+    second: star_scroll_overlay_9
+  - first:
+      213: -4101947924921496114
+    second: star_scroll_overlay_10
+  - first:
+      213: -2719721228347709406
+    second: star_scroll_overlay_11
+  - first:
+      213: -7829676371509367916
+    second: star_scroll_overlay_12
+  - first:
+      213: 7888058901458588531
+    second: star_scroll_overlay_13
+  - first:
+      213: 1909540580410388104
+    second: star_scroll_overlay_14
+  - first:
+      213: 6637151539520000648
+    second: star_scroll_overlay_15
+  - first:
+      213: -87194141604583606
+    second: star_scroll_overlay_16
+  - first:
+      213: 378988067391244886
+    second: star_scroll_overlay_17
+  - first:
+      213: -9015643851490130403
+    second: star_scroll_overlay_18
+  - first:
+      213: -1881420087791917013
+    second: star_scroll_overlay_19
+  - first:
+      213: 4651131654500355357
+    second: star_scroll_overlay_20
+  - first:
+      213: -6585011980237967273
+    second: star_scroll_overlay_21
+  - first:
+      213: -4719308897871018557
+    second: star_scroll_overlay_22
+  - first:
+      213: 7540243375213560418
+    second: star_scroll_overlay_23
+  - first:
+      213: -384852087403331393
+    second: star_scroll_overlay_24
+  - first:
+      213: 1636059523683738481
+    second: star_scroll_overlay_25
+  - first:
+      213: -6641308716602912560
+    second: star_scroll_overlay_26
+  - first:
+      213: -5830231809913212484
+    second: star_scroll_overlay_27
+  - first:
+      213: -5754953037308420231
+    second: star_scroll_overlay_28
+  - first:
+      213: -3019445111997436758
+    second: star_scroll_overlay_29
+  - first:
+      213: -3349853078740923198
+    second: star_scroll_overlay_30
+  - first:
+      213: -4659417375633731500
+    second: star_scroll_overlay_31
+  - first:
+      213: 1044072011304203425
+    second: star_scroll_overlay_32
+  - first:
+      213: -1695248687293556806
+    second: star_scroll_overlay_33
+  - first:
+      213: -7275213017758004510
+    second: star_scroll_overlay_34
+  - first:
+      213: -4376264032289615548
+    second: star_scroll_overlay_35
+  - first:
+      213: 5484947700091383439
+    second: star_scroll_overlay_36
+  - first:
+      213: -4625390970461726519
+    second: star_scroll_overlay_37
+  - first:
+      213: 762005367765631637
+    second: star_scroll_overlay_38
+  - first:
+      213: 5798584692444573895
+    second: star_scroll_overlay_39
+  - first:
+      213: 929837996614632115
+    second: star_scroll_overlay_40
+  - first:
+      213: 5335656550648537881
+    second: star_scroll_overlay_41
+  - first:
+      213: 2347526095874656867
+    second: star_scroll_overlay_42
+  - first:
+      213: 640545482444860134
+    second: star_scroll_overlay_43
+  - first:
+      213: 3656231812167702852
+    second: star_scroll_overlay_44
+  - first:
+      213: -8667999046858431431
+    second: star_scroll_overlay_45
+  - first:
+      213: 6196121413379469657
+    second: star_scroll_overlay_46
+  - first:
+      213: -153467545382240319
+    second: star_scroll_overlay_47
+  - first:
+      213: -4209415090146992436
+    second: star_scroll_overlay_48
+  - first:
+      213: 9155754961532771374
+    second: star_scroll_overlay_49
+  - first:
+      213: 4742005549150948135
+    second: star_scroll_overlay_50
+  - first:
+      213: -4360880869995510052
+    second: star_scroll_overlay_51
+  - first:
+      213: 7389880829874814642
+    second: star_scroll_overlay_52
+  - first:
+      213: 4751192694403743581
+    second: star_scroll_overlay_53
+  - first:
+      213: 466143524164191606
+    second: star_scroll_overlay_54
+  - first:
+      213: -770282712036884788
+    second: star_scroll_overlay_55
+  - first:
+      213: -2668722347180432249
+    second: star_scroll_overlay_56
+  - first:
+      213: -875911902390619023
+    second: star_scroll_overlay_57
+  - first:
+      213: -8368748020635874851
+    second: star_scroll_overlay_58
+  - first:
+      213: -5935395059969860992
+    second: star_scroll_overlay_59
+  - first:
+      213: 7682130719645793779
+    second: star_scroll_overlay_60
+  - first:
+      213: -2724443354696848919
+    second: star_scroll_overlay_61
+  - first:
+      213: -8001297060761144938
+    second: star_scroll_overlay_62
+  - first:
+      213: -2223662261252010422
+    second: star_scroll_overlay_63
+  - first:
+      213: -3030130474465694995
+    second: star_scroll_overlay_64
+  - first:
+      213: 4786884216218755130
+    second: star_scroll_overlay_65
+  - first:
+      213: 3155718320148753082
+    second: star_scroll_overlay_66
+  - first:
+      213: 536256680697855425
+    second: star_scroll_overlay_67
+  - first:
+      213: -7016656829160155689
+    second: star_scroll_overlay_68
+  - first:
+      213: -6688846009150918944
+    second: star_scroll_overlay_69
+  - first:
+      213: -8658281822103435323
+    second: star_scroll_overlay_70
+  - first:
+      213: 6961185241795407925
+    second: star_scroll_overlay_71
+  - first:
+      213: 4395775895392153751
+    second: star_scroll_overlay_72
+  - first:
+      213: 4668500029010418829
+    second: star_scroll_overlay_73
+  - first:
+      213: -8354329390651172520
+    second: star_scroll_overlay_74
+  - first:
+      213: -2150704935052095391
+    second: star_scroll_overlay_75
+  - first:
+      213: 8482809865965376963
+    second: star_scroll_overlay_76
+  - first:
+      213: -7932082881583331175
+    second: star_scroll_overlay_77
+  - first:
+      213: 87359317164220444
+    second: star_scroll_overlay_78
+  - first:
+      213: -7661199952635241011
+    second: star_scroll_overlay_79
+  - first:
+      213: -887270885897638266
+    second: star_scroll_overlay_80
+  - first:
+      213: -5067168306105456242
+    second: star_scroll_overlay_81
+  - first:
+      213: -5364927325122232286
+    second: star_scroll_overlay_82
+  - first:
+      213: -198622625165338406
+    second: star_scroll_overlay_83
+  - first:
+      213: -7092402132469891773
+    second: star_scroll_overlay_84
+  - first:
+      213: 2118659879193435908
+    second: star_scroll_overlay_85
+  - first:
+      213: -2128207086651145712
+    second: star_scroll_overlay_86
+  - first:
+      213: 6846089340525680599
+    second: star_scroll_overlay_87
+  - first:
+      213: 2968773330279790227
+    second: star_scroll_overlay_88
+  - first:
+      213: -4155196911541463140
+    second: star_scroll_overlay_89
+  - first:
+      213: -3512901550912283969
+    second: star_scroll_overlay_90
+  - first:
+      213: 2485631026894724625
+    second: star_scroll_overlay_91
+  - first:
+      213: 6426494411908635719
+    second: star_scroll_overlay_92
+  - first:
+      213: -8038739691456632371
+    second: star_scroll_overlay_93
+  - first:
+      213: -8747685314905936889
+    second: star_scroll_overlay_94
+  - first:
+      213: 9161441298510037842
+    second: star_scroll_overlay_95
+  - first:
+      213: -9052670984371694692
+    second: star_scroll_overlay_96
+  - first:
+      213: -565836770163433766
+    second: star_scroll_overlay_97
+  - first:
+      213: 4152641375124547308
+    second: star_scroll_overlay_98
+  - first:
+      213: -6620428484435723610
+    second: star_scroll_overlay_99
+  - first:
+      213: 7608838770356012784
+    second: star_scroll_overlay_100
+  - first:
+      213: -6159050171650057694
+    second: star_scroll_overlay_101
+  - first:
+      213: -5468654120775734831
+    second: star_scroll_overlay_102
+  - first:
+      213: 6176930303519619068
+    second: star_scroll_overlay_103
+  - first:
+      213: 8468367530315240412
+    second: star_scroll_overlay_104
+  - first:
+      213: 6198797297186398558
+    second: star_scroll_overlay_105
+  - first:
+      213: -6285678537655459365
+    second: star_scroll_overlay_106
+  - first:
+      213: 7325564349345614173
+    second: star_scroll_overlay_107
+  - first:
+      213: -6650397436822262227
+    second: star_scroll_overlay_108
+  - first:
+      213: 347942122617815933
+    second: star_scroll_overlay_109
+  - first:
+      213: -1812632133547456776
+    second: star_scroll_overlay_110
+  - first:
+      213: 6942285770975953358
+    second: star_scroll_overlay_111
+  - first:
+      213: 3028446777608552290
+    second: star_scroll_overlay_112
+  - first:
+      213: 46182718350705328
+    second: star_scroll_overlay_113
+  - first:
+      213: 7214886644721815817
+    second: star_scroll_overlay_114
+  - first:
+      213: -1087992313075892314
+    second: star_scroll_overlay_115
+  - first:
+      213: 4062379024604934194
+    second: star_scroll_overlay_116
+  - first:
+      213: -3762770205968366311
+    second: star_scroll_overlay_117
+  - first:
+      213: -7549713897914032961
+    second: star_scroll_overlay_118
+  - first:
+      213: 639614156903845143
+    second: star_scroll_overlay_119
+  - first:
+      213: 7315546041859825543
+    second: star_scroll_overlay_120
+  - first:
+      213: -1292322584533290479
+    second: star_scroll_overlay_121
+  - first:
+      213: 6660498048332208911
+    second: star_scroll_overlay_122
+  - first:
+      213: -7948096335548457759
+    second: star_scroll_overlay_123
+  - first:
+      213: 3273257012912198054
+    second: star_scroll_overlay_124
+  - first:
+      213: -302543547461872305
+    second: star_scroll_overlay_125
+  - first:
+      213: 586758421529476364
+    second: star_scroll_overlay_126
+  - first:
+      213: -7379965043071742973
+    second: star_scroll_overlay_127
+  - first:
+      213: 7493549612226544526
+    second: star_scroll_overlay_128
+  - first:
+      213: -4324418089646097945
+    second: star_scroll_overlay_129
+  - first:
+      213: 6087805714223442249
+    second: star_scroll_overlay_130
+  - first:
+      213: -8499665995515760793
+    second: star_scroll_overlay_131
+  - first:
+      213: 4251820414308820922
+    second: star_scroll_overlay_132
+  - first:
+      213: -2190310836897244416
+    second: star_scroll_overlay_133
+  - first:
+      213: 918639191043224650
+    second: star_scroll_overlay_134
+  - first:
+      213: -7678197546868990204
+    second: star_scroll_overlay_135
+  - first:
+      213: 7310405025053354602
+    second: star_scroll_overlay_136
+  - first:
+      213: -1246186538057073626
+    second: star_scroll_overlay_137
+  - first:
+      213: 2313246203269598257
+    second: star_scroll_overlay_138
+  - first:
+      213: -5549951002734504247
+    second: star_scroll_overlay_139
+  - first:
+      213: 911374251743639016
+    second: star_scroll_overlay_140
+  - first:
+      213: -5672730704984595288
+    second: star_scroll_overlay_141
+  - first:
+      213: -6743918376423621833
+    second: star_scroll_overlay_142
+  - first:
+      213: -6754511374952855229
+    second: star_scroll_overlay_143
+  - first:
+      213: -850945010455111922
+    second: star_scroll_overlay_144
+  - first:
+      213: 5204652459525563217
+    second: star_scroll_overlay_145
+  - first:
+      213: -9152490634859061770
+    second: star_scroll_overlay_146
+  - first:
+      213: -7369466019072745512
+    second: star_scroll_overlay_147
+  - first:
+      213: -1162077904391193563
+    second: star_scroll_overlay_148
+  - first:
+      213: 6160990945996775298
+    second: star_scroll_overlay_149
+  - first:
+      213: 941217693072159986
+    second: star_scroll_overlay_150
+  - first:
+      213: 2841213615485150718
+    second: star_scroll_overlay_151
+  - first:
+      213: 3955261359520551558
+    second: star_scroll_overlay_152
+  - first:
+      213: 6549963335656800219
+    second: star_scroll_overlay_153
+  - first:
+      213: 4948746722329702605
+    second: star_scroll_overlay_154
+  - first:
+      213: 2925814387830247790
+    second: star_scroll_overlay_155
+  - first:
+      213: 2700288992731860972
+    second: star_scroll_overlay_156
+  - first:
+      213: -7472487449998115982
+    second: star_scroll_overlay_157
+  - first:
+      213: -313939759466315787
+    second: star_scroll_overlay_158
+  - first:
+      213: 8480810535981108918
+    second: star_scroll_overlay_159
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 1
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: star_scroll_overlay_0
+      rect:
+        serializedVersion: 2
+        x: 44
+        y: 496
+        width: 9
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 95cd04a4981cfe5e0800000000000000
+      internalID: -1878069724189762471
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: star_scroll_overlay_1
+      rect:
+        serializedVersion: 2
+        x: 146
+        y: 505
+        width: 9
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 183f845e5a99fc040800000000000000
+      internalID: 4670120276401910657
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: star_scroll_overlay_2
+      rect:
+        serializedVersion: 2
+        x: 156
+        y: 499
+        width: 10
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 53b5fdd5332692060800000000000000
+      internalID: 6929177474443991861
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: star_scroll_overlay_3
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 496
+        width: 9
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f0f16a6b9d40f66c0800000000000000
+      internalID: -4148091398666182897
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: star_scroll_overlay_4
+      rect:
+        serializedVersion: 2
+        x: 408
+        y: 503
+        width: 9
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6907f47ca6a3b7790800000000000000
+      internalID: -7531361721562206058
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: star_scroll_overlay_5
+      rect:
+        serializedVersion: 2
+        x: 254
+        y: 490
+        width: 9
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8bf17d26117e66d40800000000000000
+      internalID: 5577399250403663800
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: star_scroll_overlay_6
+      rect:
+        serializedVersion: 2
+        x: 369
+        y: 488
+        width: 11
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6851c3829fb86ee00800000000000000
+      internalID: 1073699463412585862
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: star_scroll_overlay_7
+      rect:
+        serializedVersion: 2
+        x: 415
+        y: 488
+        width: 9
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5a43bfb185384e060800000000000000
+      internalID: 6981849736780919973
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: star_scroll_overlay_8
+      rect:
+        serializedVersion: 2
+        x: 452
+        y: 487
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 786a78e2d2adc2110800000000000000
+      internalID: 1237603885209069191
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: star_scroll_overlay_9
+      rect:
+        serializedVersion: 2
+        x: 480
+        y: 493
+        width: 9
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e5e4b88645a745410800000000000000
+      internalID: 1464930281752055390
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: star_scroll_overlay_10
+      rect:
+        serializedVersion: 2
+        x: 355
+        y: 483
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ecd47e76814f217c0800000000000000
+      internalID: -4101947924921496114
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: star_scroll_overlay_11
+      rect:
+        serializedVersion: 2
+        x: 325
+        y: 473
+        width: 9
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 228ee38d3fb914ad0800000000000000
+      internalID: -2719721228347709406
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: star_scroll_overlay_12
+      rect:
+        serializedVersion: 2
+        x: 446
+        y: 470
+        width: 10
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 49b2ae1d2d6675390800000000000000
+      internalID: -7829676371509367916
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: star_scroll_overlay_13
+      rect:
+        serializedVersion: 2
+        x: 74
+        y: 456
+        width: 9
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3731cc437c3087d60800000000000000
+      internalID: 7888058901458588531
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: star_scroll_overlay_14
+      rect:
+        serializedVersion: 2
+        x: 165
+        y: 453
+        width: 11
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 88eed8b6a0d008a10800000000000000
+      internalID: 1909540580410388104
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: star_scroll_overlay_15
+      rect:
+        serializedVersion: 2
+        x: 190
+        y: 452
+        width: 9
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 882d689f826eb1c50800000000000000
+      internalID: 6637151539520000648
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: star_scroll_overlay_16
+      rect:
+        serializedVersion: 2
+        x: 259
+        y: 457
+        width: 9
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a47e923e3693acef0800000000000000
+      internalID: -87194141604583606
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: star_scroll_overlay_17
+      rect:
+        serializedVersion: 2
+        x: 271
+        y: 443
+        width: 24
+        height: 20
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 65a87faa3af624500800000000000000
+      internalID: 378988067391244886
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: star_scroll_overlay_18
+      rect:
+        serializedVersion: 2
+        x: 164
+        y: 441
+        width: 9
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d160f7a1faff1e280800000000000000
+      internalID: -9015643851490130403
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: star_scroll_overlay_19
+      rect:
+        serializedVersion: 2
+        x: 233
+        y: 438
+        width: 9
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b28e0e9f56ad3e5e0800000000000000
+      internalID: -1881420087791917013
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: star_scroll_overlay_20
+      rect:
+        serializedVersion: 2
+        x: 317
+        y: 438
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d1d8116d8932c8040800000000000000
+      internalID: 4651131654500355357
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: star_scroll_overlay_21
+      rect:
+        serializedVersion: 2
+        x: 380
+        y: 429
+        width: 9
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 750793c2e765d94a0800000000000000
+      internalID: -6585011980237967273
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: star_scroll_overlay_22
+      rect:
+        serializedVersion: 2
+        x: 467
+        y: 426
+        width: 11
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3c5ce05bf85a18eb0800000000000000
+      internalID: -4719308897871018557
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: star_scroll_overlay_23
+      rect:
+        serializedVersion: 2
+        x: 18
+        y: 412
+        width: 9
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 262c89b566354a860800000000000000
+      internalID: 7540243375213560418
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: star_scroll_overlay_24
+      rect:
+        serializedVersion: 2
+        x: 222
+        y: 418
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fb0c147c01bb8aaf0800000000000000
+      internalID: -384852087403331393
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: star_scroll_overlay_25
+      rect:
+        serializedVersion: 2
+        x: 233
+        y: 417
+        width: 9
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1736094f77374b610800000000000000
+      internalID: 1636059523683738481
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: star_scroll_overlay_26
+      rect:
+        serializedVersion: 2
+        x: 281
+        y: 414
+        width: 9
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0d09d2fc8e455d3a0800000000000000
+      internalID: -6641308716602912560
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: star_scroll_overlay_27
+      rect:
+        serializedVersion: 2
+        x: 301
+        y: 412
+        width: 8
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cb1b0fb0f0bd61fa0800000000000000
+      internalID: -5830231809913212484
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: star_scroll_overlay_28
+      rect:
+        serializedVersion: 2
+        x: 331
+        y: 417
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 97f1d2024bc4220b0800000000000000
+      internalID: -5754953037308420231
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: star_scroll_overlay_29
+      rect:
+        serializedVersion: 2
+        x: 74
+        y: 402
+        width: 9
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: aac6a981ba6c816d0800000000000000
+      internalID: -3019445111997436758
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: star_scroll_overlay_30
+      rect:
+        serializedVersion: 2
+        x: 244
+        y: 409
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2cc06e78f5ee281d0800000000000000
+      internalID: -3349853078740923198
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: star_scroll_overlay_31
+      rect:
+        serializedVersion: 2
+        x: 479
+        y: 407
+        width: 9
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4509111659c665fb0800000000000000
+      internalID: -4659417375633731500
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: star_scroll_overlay_32
+      rect:
+        serializedVersion: 2
+        x: 189
+        y: 395
+        width: 9
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1a4f6b966f94d7e00800000000000000
+      internalID: 1044072011304203425
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: star_scroll_overlay_33
+      rect:
+        serializedVersion: 2
+        x: 415
+        y: 398
+        width: 9
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ab79bebfc444978e0800000000000000
+      internalID: -1695248687293556806
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: star_scroll_overlay_34
+      rect:
+        serializedVersion: 2
+        x: 452
+        y: 392
+        width: 10
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2ea8c3b5e40490b90800000000000000
+      internalID: -7275213017758004510
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: star_scroll_overlay_35
+      rect:
+        serializedVersion: 2
+        x: 124
+        y: 385
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4411f009c036443c0800000000000000
+      internalID: -4376264032289615548
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: star_scroll_overlay_36
+      rect:
+        serializedVersion: 2
+        x: 295
+        y: 377
+        width: 10
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f8eea8b6fd27e1c40800000000000000
+      internalID: 5484947700091383439
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: star_scroll_overlay_37
+      rect:
+        serializedVersion: 2
+        x: 497
+        y: 378
+        width: 9
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9c854523b6f4fcfb0800000000000000
+      internalID: -4625390970461726519
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: star_scroll_overlay_38
+      rect:
+        serializedVersion: 2
+        x: 40
+        y: 365
+        width: 9
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5928c9e38df239a00800000000000000
+      internalID: 762005367765631637
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: star_scroll_overlay_39
+      rect:
+        serializedVersion: 2
+        x: 148
+        y: 360
+        width: 10
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7c03d293e06b87050800000000000000
+      internalID: 5798584692444573895
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: star_scroll_overlay_40
+      rect:
+        serializedVersion: 2
+        x: 400
+        y: 369
+        width: 9
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3b240ee3bb277ec00800000000000000
+      internalID: 929837996614632115
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: star_scroll_overlay_41
+      rect:
+        serializedVersion: 2
+        x: 450
+        y: 368
+        width: 9
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 91364e00d5f0c0a40800000000000000
+      internalID: 5335656550648537881
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: star_scroll_overlay_42
+      rect:
+        serializedVersion: 2
+        x: 462
+        y: 359
+        width: 10
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 36a8195eb86149020800000000000000
+      internalID: 2347526095874656867
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: star_scroll_overlay_43
+      rect:
+        serializedVersion: 2
+        x: 126
+        y: 348
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6ea6b97f8bca3e800800000000000000
+      internalID: 640545482444860134
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: star_scroll_overlay_44
+      rect:
+        serializedVersion: 2
+        x: 188
+        y: 350
+        width: 9
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4491dbc267b8db230800000000000000
+      internalID: 3656231812167702852
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: star_scroll_overlay_45
+      rect:
+        serializedVersion: 2
+        x: 397
+        y: 349
+        width: 9
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 934249abac415b780800000000000000
+      internalID: -8667999046858431431
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: star_scroll_overlay_46
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 336
+        width: 5
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 951bca5d89b0df550800000000000000
+      internalID: 6196121413379469657
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: star_scroll_overlay_47
+      rect:
+        serializedVersion: 2
+        x: 18
+        y: 327
+        width: 10
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1cfb0f0a416ceddf0800000000000000
+      internalID: -153467545382240319
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: star_scroll_overlay_48
+      rect:
+        serializedVersion: 2
+        x: 317
+        y: 330
+        width: 9
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cce9e9727472595c0800000000000000
+      internalID: -4209415090146992436
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: star_scroll_overlay_49
+      rect:
+        serializedVersion: 2
+        x: 372
+        y: 329
+        width: 11
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e2c5ea4d0a6cf0f70800000000000000
+      internalID: 9155754961532771374
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: star_scroll_overlay_50
+      rect:
+        serializedVersion: 2
+        x: 410
+        y: 333
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 72bc2183cecfec140800000000000000
+      internalID: 4742005549150948135
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: star_scroll_overlay_51
+      rect:
+        serializedVersion: 2
+        x: 461
+        y: 336
+        width: 9
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cd60f1424f90b73c0800000000000000
+      internalID: -4360880869995510052
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: star_scroll_overlay_52
+      rect:
+        serializedVersion: 2
+        x: 507
+        y: 336
+        width: 5
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2be382526712e8660800000000000000
+      internalID: 7389880829874814642
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: star_scroll_overlay_53
+      rect:
+        serializedVersion: 2
+        x: 109
+        y: 325
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d5fbd592590afe140800000000000000
+      internalID: 4751192694403743581
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: star_scroll_overlay_54
+      rect:
+        serializedVersion: 2
+        x: 208
+        y: 326
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 675c724c013187600800000000000000
+      internalID: 466143524164191606
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: star_scroll_overlay_55
+      rect:
+        serializedVersion: 2
+        x: 236
+        y: 322
+        width: 9
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cceba6c54f76f45f0800000000000000
+      internalID: -770282712036884788
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: star_scroll_overlay_56
+      rect:
+        serializedVersion: 2
+        x: 103
+        y: 306
+        width: 9
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 784e92c2a2bc6fad0800000000000000
+      internalID: -2668722347180432249
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: star_scroll_overlay_57
+      rect:
+        serializedVersion: 2
+        x: 189
+        y: 314
+        width: 9
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 174787bf3c228d3f0800000000000000
+      internalID: -875911902390619023
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: star_scroll_overlay_58
+      rect:
+        serializedVersion: 2
+        x: 282
+        y: 310
+        width: 9
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: dd9ce37c30c3cdb80800000000000000
+      internalID: -8368748020635874851
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: star_scroll_overlay_59
+      rect:
+        serializedVersion: 2
+        x: 437
+        y: 306
+        width: 10
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 08a53e8d3ad31ada0800000000000000
+      internalID: -5935395059969860992
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: star_scroll_overlay_60
+      rect:
+        serializedVersion: 2
+        x: 46
+        y: 281
+        width: 8
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3fd7a9610396c9a60800000000000000
+      internalID: 7682130719645793779
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: star_scroll_overlay_61
+      rect:
+        serializedVersion: 2
+        x: 79
+        y: 273
+        width: 10
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9e9ee902435d03ad0800000000000000
+      internalID: -2724443354696848919
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: star_scroll_overlay_62
+      rect:
+        serializedVersion: 2
+        x: 415
+        y: 278
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 69174f647bea5f090800000000000000
+      internalID: -8001297060761144938
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: star_scroll_overlay_63
+      rect:
+        serializedVersion: 2
+        x: 59
+        y: 263
+        width: 9
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a4ec1a174f6f321e0800000000000000
+      internalID: -2223662261252010422
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: star_scroll_overlay_64
+      rect:
+        serializedVersion: 2
+        x: 384
+        y: 267
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: deae2664360d2f5d0800000000000000
+      internalID: -3030130474465694995
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: star_scroll_overlay_65
+      rect:
+        serializedVersion: 2
+        x: 390
+        y: 271
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a30a4a825dd6e6240800000000000000
+      internalID: 4786884216218755130
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: star_scroll_overlay_66
+      rect:
+        serializedVersion: 2
+        x: 402
+        y: 258
+        width: 21
+        height: 20
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: abaa8aba71d5bcb20800000000000000
+      internalID: 3155718320148753082
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: star_scroll_overlay_67
+      rect:
+        serializedVersion: 2
+        x: 431
+        y: 266
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1cdfc612c9a217700800000000000000
+      internalID: 536256680697855425
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: star_scroll_overlay_68
+      rect:
+        serializedVersion: 2
+        x: 461
+        y: 268
+        width: 9
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7d5171b2ac3df9e90800000000000000
+      internalID: -7016656829160155689
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: star_scroll_overlay_69
+      rect:
+        serializedVersion: 2
+        x: 21
+        y: 248
+        width: 21
+        height: 20
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0ee25436ef17c23a0800000000000000
+      internalID: -6688846009150918944
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: star_scroll_overlay_70
+      rect:
+        serializedVersion: 2
+        x: 202
+        y: 254
+        width: 9
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5c78d4c6e8a97d780800000000000000
+      internalID: -8658281822103435323
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: star_scroll_overlay_71
+      rect:
+        serializedVersion: 2
+        x: 269
+        y: 248
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 53038e078191b9060800000000000000
+      internalID: 6961185241795407925
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: star_scroll_overlay_72
+      rect:
+        serializedVersion: 2
+        x: 425
+        y: 256
+        width: 9
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 790f21513eee00d30800000000000000
+      internalID: 4395775895392153751
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: star_scroll_overlay_73
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 239
+        width: 6
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d8c1117aa08d9c040800000000000000
+      internalID: 4668500029010418829
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: star_scroll_overlay_74
+      rect:
+        serializedVersion: 2
+        x: 85
+        y: 245
+        width: 9
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 85991adaea57f0c80800000000000000
+      internalID: -8354329390651172520
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: star_scroll_overlay_75
+      rect:
+        serializedVersion: 2
+        x: 165
+        y: 241
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1605a89a1492722e0800000000000000
+      internalID: -2150704935052095391
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: star_scroll_overlay_76
+      rect:
+        serializedVersion: 2
+        x: 350
+        y: 238
+        width: 9
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3c59b0611aef8b570800000000000000
+      internalID: 8482809865965376963
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: star_scroll_overlay_77
+      rect:
+        serializedVersion: 2
+        x: 387
+        y: 244
+        width: 9
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 998c44a25a49be190800000000000000
+      internalID: -7932082881583331175
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: star_scroll_overlay_78
+      rect:
+        serializedVersion: 2
+        x: 417
+        y: 243
+        width: 9
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c10e46b06dc563100800000000000000
+      internalID: 87359317164220444
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: star_scroll_overlay_79
+      rect:
+        serializedVersion: 2
+        x: 499
+        y: 241
+        width: 13
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: dcddfeddb33fda590800000000000000
+      internalID: -7661199952635241011
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: star_scroll_overlay_80
+      rect:
+        serializedVersion: 2
+        x: 65
+        y: 236
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 68e668a84d7cfa3f0800000000000000
+      internalID: -887270885897638266
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: star_scroll_overlay_81
+      rect:
+        serializedVersion: 2
+        x: 88
+        y: 229
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e896779c54dcda9b0800000000000000
+      internalID: -5067168306105456242
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: star_scroll_overlay_82
+      rect:
+        serializedVersion: 2
+        x: 378
+        y: 231
+        width: 9
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2208d4cb503fb85b0800000000000000
+      internalID: -5364927325122232286
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: star_scroll_overlay_83
+      rect:
+        serializedVersion: 2
+        x: 459
+        y: 235
+        width: 9
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ad81aa656c95e3df0800000000000000
+      internalID: -198622625165338406
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: star_scroll_overlay_84
+      rect:
+        serializedVersion: 2
+        x: 54
+        y: 215
+        width: 9
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 34db8e176d9b29d90800000000000000
+      internalID: -7092402132469891773
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: star_scroll_overlay_85
+      rect:
+        serializedVersion: 2
+        x: 259
+        y: 223
+        width: 9
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 40f523b5fedf66d10800000000000000
+      internalID: 2118659879193435908
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: star_scroll_overlay_86
+      rect:
+        serializedVersion: 2
+        x: 309
+        y: 214
+        width: 10
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 01280bf2ee61772e0800000000000000
+      internalID: -2128207086651145712
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: star_scroll_overlay_87
+      rect:
+        serializedVersion: 2
+        x: 350
+        y: 223
+        width: 9
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7d71f9aabf1320f50800000000000000
+      internalID: 6846089340525680599
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: star_scroll_overlay_88
+      rect:
+        serializedVersion: 2
+        x: 365
+        y: 216
+        width: 9
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 396faf95d93333920800000000000000
+      internalID: 2968773330279790227
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: star_scroll_overlay_89
+      rect:
+        serializedVersion: 2
+        x: 196
+        y: 206
+        width: 9
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c9755c39c66c556c0800000000000000
+      internalID: -4155196911541463140
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: star_scroll_overlay_90
+      rect:
+        serializedVersion: 2
+        x: 431
+        y: 210
+        width: 9
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fba54fec6aaaf3fc0800000000000000
+      internalID: -3512901550912283969
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: star_scroll_overlay_91
+      rect:
+        serializedVersion: 2
+        x: 441
+        y: 211
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 11edfb0ef3cbe7220800000000000000
+      internalID: 2485631026894724625
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: star_scroll_overlay_92
+      rect:
+        serializedVersion: 2
+        x: 503
+        y: 214
+        width: 9
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 74cd8dc5e9e7f2950800000000000000
+      internalID: 6426494411908635719
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: star_scroll_overlay_93
+      rect:
+        serializedVersion: 2
+        x: 49
+        y: 201
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: dc9e4e877d8a07090800000000000000
+      internalID: -8038739691456632371
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: star_scroll_overlay_94
+      rect:
+        serializedVersion: 2
+        x: 71
+        y: 200
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 70c6126ad8af99680800000000000000
+      internalID: -8747685314905936889
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: star_scroll_overlay_95
+      rect:
+        serializedVersion: 2
+        x: 334
+        y: 203
+        width: 9
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 253c844525af32f70800000000000000
+      internalID: 9161441298510037842
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: star_scroll_overlay_96
+      rect:
+        serializedVersion: 2
+        x: 77
+        y: 188
+        width: 10
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c931a0ce3b37e5280800000000000000
+      internalID: -9052670984371694692
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: star_scroll_overlay_97
+      rect:
+        serializedVersion: 2
+        x: 90
+        y: 183
+        width: 18
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: adedd89947eb528f0800000000000000
+      internalID: -565836770163433766
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: star_scroll_overlay_98
+      rect:
+        serializedVersion: 2
+        x: 234
+        y: 194
+        width: 9
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ce663eb345521a930800000000000000
+      internalID: 4152641375124547308
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: star_scroll_overlay_99
+      rect:
+        serializedVersion: 2
+        x: 341
+        y: 193
+        width: 9
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6aab454be538f14a0800000000000000
+      internalID: -6620428484435723610
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: star_scroll_overlay_100
+      rect:
+        serializedVersion: 2
+        x: 421
+        y: 187
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0f64a4c5c86089960800000000000000
+      internalID: 7608838770356012784
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: star_scroll_overlay_101
+      rect:
+        serializedVersion: 2
+        x: 90
+        y: 171
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 22a5dfc3088a68aa0800000000000000
+      internalID: -6159050171650057694
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: star_scroll_overlay_102
+      rect:
+        serializedVersion: 2
+        x: 123
+        y: 174
+        width: 9
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1d9afa32d007b14b0800000000000000
+      internalID: -5468654120775734831
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: star_scroll_overlay_103
+      rect:
+        serializedVersion: 2
+        x: 352
+        y: 179
+        width: 9
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cf7f1af526dd8b550800000000000000
+      internalID: 6176930303519619068
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: star_scroll_overlay_104
+      rect:
+        serializedVersion: 2
+        x: 484
+        y: 175
+        width: 9
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cd354e7c66fa58570800000000000000
+      internalID: 8468367530315240412
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: star_scroll_overlay_105
+      rect:
+        serializedVersion: 2
+        x: 114
+        y: 162
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e5162759c4d860650800000000000000
+      internalID: 6198797297186398558
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: star_scroll_overlay_106
+      rect:
+        serializedVersion: 2
+        x: 339
+        y: 154
+        width: 20
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bd1efb64ca8c4c8a0800000000000000
+      internalID: -6285678537655459365
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: star_scroll_overlay_107
+      rect:
+        serializedVersion: 2
+        x: 389
+        y: 163
+        width: 10
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d59c20696f1a9a560800000000000000
+      internalID: 7325564349345614173
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: star_scroll_overlay_108
+      rect:
+        serializedVersion: 2
+        x: 494
+        y: 166
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d2e6a0b34ca05b3a0800000000000000
+      internalID: -6650397436822262227
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: star_scroll_overlay_109
+      rect:
+        serializedVersion: 2
+        x: 49
+        y: 153
+        width: 9
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d73c70d548324d400800000000000000
+      internalID: 347942122617815933
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: star_scroll_overlay_110
+      rect:
+        serializedVersion: 2
+        x: 85
+        y: 149
+        width: 9
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8f60273adac38d6e0800000000000000
+      internalID: -1812632133547456776
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: star_scroll_overlay_111
+      rect:
+        serializedVersion: 2
+        x: 101
+        y: 127
+        width: 20
+        height: 28
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ec1454c7024f75060800000000000000
+      internalID: 6942285770975953358
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: star_scroll_overlay_112
+      rect:
+        serializedVersion: 2
+        x: 161
+        y: 151
+        width: 8
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 26fb8808c44370a20800000000000000
+      internalID: 3028446777608552290
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: star_scroll_overlay_113
+      rect:
+        serializedVersion: 2
+        x: 366
+        y: 147
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0b24e0a00f214a000800000000000000
+      internalID: 46182718350705328
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: star_scroll_overlay_114
+      rect:
+        serializedVersion: 2
+        x: 160
+        y: 132
+        width: 9
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9019a516d2d602460800000000000000
+      internalID: 7214886644721815817
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: star_scroll_overlay_115
+      rect:
+        serializedVersion: 2
+        x: 307
+        y: 136
+        width: 9
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6af71c471cca6e0f0800000000000000
+      internalID: -1087992313075892314
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: star_scroll_overlay_116
+      rect:
+        serializedVersion: 2
+        x: 461
+        y: 136
+        width: 8
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 23033901338706830800000000000000
+      internalID: 4062379024604934194
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: star_scroll_overlay_117
+      rect:
+        serializedVersion: 2
+        x: 2
+        y: 124
+        width: 10
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 91505d50f64f7cbc0800000000000000
+      internalID: -3762770205968366311
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: star_scroll_overlay_118
+      rect:
+        serializedVersion: 2
+        x: 131
+        y: 121
+        width: 9
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fbc110fb5370a3790800000000000000
+      internalID: -7549713897914032961
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: star_scroll_overlay_119
+      rect:
+        serializedVersion: 2
+        x: 164
+        y: 117
+        width: 9
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 71d8097dfad50e800800000000000000
+      internalID: 639614156903845143
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: star_scroll_overlay_120
+      rect:
+        serializedVersion: 2
+        x: 238
+        y: 124
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 78fd11b9d5a068560800000000000000
+      internalID: 7315546041859825543
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: star_scroll_overlay_121
+      rect:
+        serializedVersion: 2
+        x: 464
+        y: 118
+        width: 9
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 112bda5d47fb01ee0800000000000000
+      internalID: -1292322584533290479
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: star_scroll_overlay_122
+      rect:
+        serializedVersion: 2
+        x: 236
+        y: 105
+        width: 9
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f0b1606afa7de6c50800000000000000
+      internalID: 6660498048332208911
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: star_scroll_overlay_123
+      rect:
+        serializedVersion: 2
+        x: 327
+        y: 112
+        width: 9
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1ecdc0f5e70b2b190800000000000000
+      internalID: -7948096335548457759
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: star_scroll_overlay_124
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 81
+        width: 22
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6a1103929e1fc6d20800000000000000
+      internalID: 3273257012912198054
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: star_scroll_overlay_125
+      rect:
+        serializedVersion: 2
+        x: 193
+        y: 85
+        width: 9
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f45d27c1f362dcbf0800000000000000
+      internalID: -302543547461872305
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: star_scroll_overlay_126
+      rect:
+        serializedVersion: 2
+        x: 198
+        y: 92
+        width: 9
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c0dbb34fca5942800800000000000000
+      internalID: 586758421529476364
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: star_scroll_overlay_127
+      rect:
+        serializedVersion: 2
+        x: 469
+        y: 93
+        width: 9
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 30c88e0e4e8159990800000000000000
+      internalID: -7379965043071742973
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: star_scroll_overlay_128
+      rect:
+        serializedVersion: 2
+        x: 481
+        y: 85
+        width: 31
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e8387877baf6ef760800000000000000
+      internalID: 7493549612226544526
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: star_scroll_overlay_129
+      rect:
+        serializedVersion: 2
+        x: 23
+        y: 83
+        width: 9
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7e9fe52c8a49cf3c0800000000000000
+      internalID: -4324418089646097945
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: star_scroll_overlay_130
+      rect:
+        serializedVersion: 2
+        x: 169
+        y: 80
+        width: 9
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 949a1e1ea0b3c7450800000000000000
+      internalID: 6087805714223442249
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: star_scroll_overlay_131
+      rect:
+        serializedVersion: 2
+        x: 184
+        y: 78
+        width: 9
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 76fe0db6fce1b0a80800000000000000
+      internalID: -8499665995515760793
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: star_scroll_overlay_132
+      rect:
+        serializedVersion: 2
+        x: 407
+        y: 81
+        width: 9
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ab7a1a3c320810b30800000000000000
+      internalID: 4251820414308820922
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: star_scroll_overlay_133
+      rect:
+        serializedVersion: 2
+        x: 482
+        y: 75
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 00b1d0b06e37a91e0800000000000000
+      internalID: -2190310836897244416
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: star_scroll_overlay_134
+      rect:
+        serializedVersion: 2
+        x: 93
+        y: 73
+        width: 8
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a4432e22a79afbc00800000000000000
+      internalID: 918639191043224650
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: star_scroll_overlay_135
+      rect:
+        serializedVersion: 2
+        x: 135
+        y: 68
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 40f199f0300917590800000000000000
+      internalID: -7678197546868990204
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: star_scroll_overlay_136
+      rect:
+        serializedVersion: 2
+        x: 173
+        y: 52
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a6a298a53a6c37560800000000000000
+      internalID: 7310405025053354602
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: star_scroll_overlay_137
+      rect:
+        serializedVersion: 2
+        x: 290
+        y: 55
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 62cfb3b32f7a4bee0800000000000000
+      internalID: -1246186538057073626
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: star_scroll_overlay_138
+      rect:
+        serializedVersion: 2
+        x: 312
+        y: 57
+        width: 10
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 13cc7ef6a2d4a1020800000000000000
+      internalID: 2313246203269598257
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: star_scroll_overlay_139
+      rect:
+        serializedVersion: 2
+        x: 360
+        y: 53
+        width: 9
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9c6df29c7fc9af2b0800000000000000
+      internalID: -5549951002734504247
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: star_scroll_overlay_140
+      rect:
+        serializedVersion: 2
+        x: 367
+        y: 48
+        width: 9
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8e5fd94ad0ad5ac00800000000000000
+      internalID: 911374251743639016
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: star_scroll_overlay_141
+      rect:
+        serializedVersion: 2
+        x: 335
+        y: 48
+        width: 9
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8a421feaa796641b0800000000000000
+      internalID: -5672730704984595288
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: star_scroll_overlay_142
+      rect:
+        serializedVersion: 2
+        x: 352
+        y: 44
+        width: 9
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 73b7a0ba7f9c862a0800000000000000
+      internalID: -6743918376423621833
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: star_scroll_overlay_143
+      rect:
+        serializedVersion: 2
+        x: 415
+        y: 46
+        width: 9
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 349899001b72342a0800000000000000
+      internalID: -6754511374952855229
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: star_scroll_overlay_144
+      rect:
+        serializedVersion: 2
+        x: 6
+        y: 37
+        width: 9
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e079e608506d034f0800000000000000
+      internalID: -850945010455111922
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: star_scroll_overlay_145
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 37
+        width: 9
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 153626526d3aa3840800000000000000
+      internalID: 5204652459525563217
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: star_scroll_overlay_146
+      rect:
+        serializedVersion: 2
+        x: 146
+        y: 38
+        width: 8
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6fdd2237242dbf080800000000000000
+      internalID: -9152490634859061770
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: star_scroll_overlay_147
+      rect:
+        serializedVersion: 2
+        x: 258
+        y: 29
+        width: 9
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8df5bd463b56ab990800000000000000
+      internalID: -7369466019072745512
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: star_scroll_overlay_148
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 18
+        width: 8
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 52cbe6b8d487fdfe0800000000000000
+      internalID: -1162077904391193563
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: star_scroll_overlay_149
+      rect:
+        serializedVersion: 2
+        x: 350
+        y: 17
+        width: 9
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 28f19808f9c308550800000000000000
+      internalID: 6160990945996775298
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: star_scroll_overlay_150
+      rect:
+        serializedVersion: 2
+        x: 372
+        y: 21
+        width: 10
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2f4f0eb4180ef0d00800000000000000
+      internalID: 941217693072159986
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: star_scroll_overlay_151
+      rect:
+        serializedVersion: 2
+        x: 443
+        y: 26
+        width: 9
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ef5eef9dab40e6720800000000000000
+      internalID: 2841213615485150718
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: star_scroll_overlay_152
+      rect:
+        serializedVersion: 2
+        x: 484
+        y: 17
+        width: 10
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6821d082049e3e630800000000000000
+      internalID: 3955261359520551558
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: star_scroll_overlay_153
+      rect:
+        serializedVersion: 2
+        x: 9
+        y: 13
+        width: 9
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bdff7a953f426ea50800000000000000
+      internalID: 6549963335656800219
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: star_scroll_overlay_154
+      rect:
+        serializedVersion: 2
+        x: 99
+        y: 4
+        width: 10
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: dc037d3acea7da440800000000000000
+      internalID: 4948746722329702605
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: star_scroll_overlay_155
+      rect:
+        serializedVersion: 2
+        x: 104
+        y: 12
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e6159512fa49a9820800000000000000
+      internalID: 2925814387830247790
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: star_scroll_overlay_156
+      rect:
+        serializedVersion: 2
+        x: 239
+        y: 9
+        width: 9
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cef0eaa388a597520800000000000000
+      internalID: 2700288992731860972
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: star_scroll_overlay_157
+      rect:
+        serializedVersion: 2
+        x: 264
+        y: 13
+        width: 9
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 27b3c4251446c4890800000000000000
+      internalID: -7472487449998115982
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: star_scroll_overlay_158
+      rect:
+        serializedVersion: 2
+        x: 377
+        y: 12
+        width: 8
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5ff732cb379a4abf0800000000000000
+      internalID: -313939759466315787
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: star_scroll_overlay_159
+      rect:
+        serializedVersion: 2
+        x: 149
+        y: 0
+        width: 13
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6be4b8ccf34e1b570800000000000000
+      internalID: 8480810535981108918
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable: {}
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

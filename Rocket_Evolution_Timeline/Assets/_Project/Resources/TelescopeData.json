@@ -1,0 +1,76 @@
+{
+  "telescopes": [
+    {
+      "id": "hubble",
+      "displayName": "Hubble Space Telescope",
+      "era": "Launched April 24, 1990 - Low Earth Orbit, about 540 km (335 mi) up",
+      "opticalPrinciple": "A 2.4 m (7.9 ft) mirror reflecting telescope in a Ritchey-Chretien design, circling Earth once every 95 minutes - close enough that astronauts could fly up and repair it by hand.",
+      "whyItLooksThisWay": "Hubble orbits above Earth's atmosphere, so there's no air to blur starlight and no city lights to wash it out - that's the real reason its images are so sharp and deep. Nobody has ever actually looked through Hubble with their own eye: its instruments are digital cameras, and a picture like this one is built by combining several black-and-white exposures taken through different filters, each tuned to the light given off by a specific element, then mapped to color afterward on the ground.",
+      "trivia": [
+        "Hubble launched with a mirror flaw just 1/50th the width of a human hair - but astronauts fixed it in orbit in 1993 by fitting the telescope its own pair of glasses, a set of corrective mirrors called COSTAR.",
+        "The famous Hubble Deep Field (1995) stared at one seemingly empty patch of sky for 342 exposures and uncovered about 3,000 galaxies nobody knew were there.",
+        "Astronauts serviced Hubble five times by spacewalking directly on it from the Space Shuttle's cargo bay - the photo here is from the final servicing mission in 2009.",
+        "Hubble's observations of distant supernovae helped reveal that the universe's expansion is accelerating - a discovery awarded the 2011 Nobel Prize in Physics."
+      ],
+      "hardwareSpriteName": "hubble_hardware",
+      "viewImageSpriteName": "hubble_view",
+      "viewImageIsEyepieceStyle": true,
+      "hardwareCredit": "NASA - Hubble separating from Shuttle Atlantis, Servicing Mission 4 (2009)",
+      "viewCredit": "NASA, ESA, Hubble Heritage Team (STScI/AURA) - Pillars of Creation, Eagle Nebula"
+    },
+    {
+      "id": "jwst",
+      "displayName": "James Webb Space Telescope",
+      "era": "Launched December 25, 2021 - Sun-Earth L2 point, about 1.5 million km away",
+      "opticalPrinciple": "A 6.5 m (21.3 ft) mirror built from 18 hexagonal, gold-coated beryllium segments that fold up for launch and unfold in space, tuned to collect infrared light rather than visible light.",
+      "whyItLooksThisWay": "JWST sees infrared light - a kind of light completely invisible to human eyes - because infrared slips through clouds of cosmic dust that block visible light outright, letting it see stars being born inside nebulae that stay hidden from other telescopes. Since our eyes can't perceive infrared at all, scientists reassign its wavelengths to colors we can see (the shortest wavelengths painted blue, the longest painted red) so an image like this one can be read at a glance - it's a translation, not a photograph of what the sky actually looks like.",
+      "trivia": [
+        "JWST's sunshield is roughly the size of a tennis court and unfolds like origami after launch, cooling the telescope's far side to about -233 degC (-388 degF).",
+        "Each of the 18 mirror segments has its own tiny motors so engineers can nudge it into position, aligning all 18 into one smooth optical surface accurate to a fraction of a wavelength of light.",
+        "JWST orbits a gravitationally stable point called L2, about four times farther from Earth than the Moon, where it stays in constant shadow behind its sunshield.",
+        "Because infrared light travels further through dust and gas, JWST can see galaxies so distant their light has been stretched (redshifted) all the way into the infrared over billions of years."
+      ],
+      "hardwareSpriteName": "jwst_hardware",
+      "viewImageSpriteName": "jwst_view",
+      "viewImageIsEyepieceStyle": true,
+      "hardwareCredit": "NASA/Chris Gunn - primary mirror assembly, Goddard Space Flight Center",
+      "viewCredit": "NASA, ESA, CSA, STScI - Cosmic Cliffs, Carina Nebula (NIRCam)"
+    },
+    {
+      "id": "vlt",
+      "displayName": "Very Large Telescope (VLT)",
+      "era": "First light May 1998 - Cerro Paranal, Atacama Desert, Chile",
+      "opticalPrinciple": "Four separate telescopes, each with an 8.2 m (26.9 ft) mirror, that can work alone or combine their light together as the Very Large Telescope Interferometer for extremely fine detail.",
+      "whyItLooksThisWay": "From the ground, Earth's atmosphere is always gently boiling - the same shimmer that makes stars twinkle, and it blurs every telescope image taken through it. The VLT fires a laser into the sky to create an artificial 'guide star,' then uses it to flex a deformable mirror thousands of times a second and cancel that blur out in real time, a system called adaptive optics. This particular image came from MUSE, an instrument that records a full rainbow spectrum at every single pixel instead of one simple photo - scientists then turn that mountain of data into a picture like this one.",
+      "trivia": [
+        "Paranal was chosen because it's one of the driest, darkest, and most cloud-free places on Earth - ideal conditions for picking out faint, distant light.",
+        "Laser guide stars let the VLT's adaptive optics correct for atmospheric blur thousands of times every second, sharpening its view close to what a space telescope can achieve.",
+        "Combined as an interferometer, the VLT's four telescopes can resolve details as fine as spotting an astronaut's footprint on the Moon from Earth.",
+        "MUSE, the instrument behind this image, lets scientists reconstruct the 3-D structure and motion of a nebula rather than just a flat picture of it."
+      ],
+      "hardwareSpriteName": "vlt_hardware",
+      "viewImageSpriteName": "vlt_view",
+      "viewImageIsEyepieceStyle": true,
+      "hardwareCredit": "ESO - Very Large Telescope, Paranal Observatory",
+      "viewCredit": "ESO/J. Walsh - MUSE image of the Saturn Nebula"
+    },
+    {
+      "id": "radio_vla",
+      "displayName": "Very Large Array (Radio Telescope)",
+      "era": "Dedicated October 1980 - Plains of San Agustin, New Mexico, USA",
+      "opticalPrinciple": "27 dish antennas, each 25 m (82 ft) across, arranged in a Y-shaped array and electronically linked so they act as one giant radio telescope - a technique called interferometry.",
+      "whyItLooksThisWay": "A radio telescope has no eyepiece at all - there has never been anything to look through here. Its dishes collect radio waves, a kind of light far beyond anything an eye can see (and completely harmless, like a very faint radio broadcast), and a computer converts the strength of that invisible signal into a picture, assigning it colors the same way a thermal camera turns heat into an image. This particular picture blends the VLA's own radio data with a little infrared data layered in for extra context.",
+      "trivia": [
+        "The 27 dishes sit on railway tracks and can be physically rearranged, spreading the array from about 1 km to 36 km across to trade a wider view for a sharper zoom.",
+        "Each dish is 25 m across and weighs 230 tons, yet can still be steered to point anywhere in the sky.",
+        "The VLA appeared in the 1997 film Contact - its real-world work includes mapping cold hydrogen gas, pulsars, and the jets blasted out by black holes.",
+        "Because radio waves pass straight through clouds of dust that block visible light, radio telescopes can detect objects completely invisible to every other kind of telescope on this list."
+      ],
+      "hardwareSpriteName": "radio_vla_hardware",
+      "viewImageSpriteName": "radio_vla_view",
+      "viewImageIsEyepieceStyle": true,
+      "hardwareCredit": "Bettymaya Foott, NRAO/AUI/NSF - VLA with the Andromeda Galaxy",
+      "viewCredit": "NRAO/AUI/NSF and Brogan et al. - W28 supernova remnant (VLA radio + MSX infrared)"
+    }
+  ]
+}

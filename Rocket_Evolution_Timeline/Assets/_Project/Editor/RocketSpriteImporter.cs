@@ -34,6 +34,19 @@ public class RocketSpriteImporter : AssetPostprocessor
     private const int PanelBorder = 52;
     private const int RingBorder = 54;
 
+    // v22 (client: a moving starfield background, "stars moving downwards").
+    // star_scroll_overlay.png (512x512, seamlessly tileable) is shown via
+    // Image.Type.Tiled, which renders it at (texture pixel size / Pixels Per
+    // Unit) UI units per tile. ScrollStarTileSize is the on-screen size (in UI
+    // units, same space as every other Anchor() call in
+    // RocketTimelineSceneBuilder.cs) one tile should render at -
+    // BuildScrollingStarfield relies on this being an exact divisor of its
+    // panel height (1080) so every panel ends on a whole tile, never a
+    // partial one - see that method's own comment for why a partial tile
+    // would make the seam between the two scrolling panels visible.
+    private const float ScrollStarTextureSize = 512f;
+    private const float ScrollStarTileSize = 360f;
+
     private void OnPreprocessTexture()
     {
         string normalizedPath = assetPath.Replace('\\', '/');
@@ -58,6 +71,31 @@ public class RocketSpriteImporter : AssetPostprocessor
         if (border > 0)
         {
             importer.spriteBorder = new Vector4(border, border, border, border);
+        }
+
+        if (fileName == "star_scroll_overlay")
+        {
+            // Pixels Per Unit set so one tile renders at exactly
+            // ScrollStarTileSize UI units (tileSize = texturePx / PPU).
+            importer.spritePixelsPerUnit = ScrollStarTextureSize / ScrollStarTileSize;
+
+            // v22.1 fix: spriteMeshType and spriteGenerateFallbackPhysicsShape
+            // aren't direct TextureImporter properties (that was a compile
+            // error, CS1061) - they live on the TextureImporterSettings
+            // struct instead, read out, changed, then written back.
+            TextureImporterSettings settings = new TextureImporterSettings();
+            importer.ReadTextureSettings(settings);
+            // Image.Type.Tiled needs the full rectangular quad, not a mesh
+            // trimmed to the opaque pixels (which is Unity's default for a
+            // transparent-background sprite like this one) - Tight mesh would
+            // clip each tile to its own star silhouettes instead of repeating
+            // the whole square, breaking the tiling entirely.
+            settings.spriteMeshType = SpriteMeshType.FullRect;
+            // This is a background decoration no player ever taps - skip the
+            // (by-default-enabled) physics-shape generation Sprite import
+            // does for every sprite, since nothing here needs a collider.
+            settings.spriteGenerateFallbackPhysicsShape = false;
+            importer.SetTextureSettings(settings);
         }
     }
 }
